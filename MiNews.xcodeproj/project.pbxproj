@@ -1,0 +1,545 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A13102811E6AB4E1008ABE4E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A13102801E6AB4E1008ABE4E /* AppDelegate.swift */; };
+		A13102831E6AB4E1008ABE4E /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A13102821E6AB4E1008ABE4E /* RootViewController.swift */; };
+		A13102851E6AB4E1008ABE4E /* DataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A13102841E6AB4E1008ABE4E /* DataViewController.swift */; };
+		A13102871E6AB4E1008ABE4E /* ModelController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A13102861E6AB4E1008ABE4E /* ModelController.swift */; };
+		A131028A1E6AB4E1008ABE4E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A13102881E6AB4E1008ABE4E /* Main.storyboard */; };
+		A131028C1E6AB4E1008ABE4E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A131028B1E6AB4E1008ABE4E /* Assets.xcassets */; };
+		A131028F1E6AB4E1008ABE4E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A131028D1E6AB4E1008ABE4E /* LaunchScreen.storyboard */; };
+		A131029A1E6AB4E1008ABE4E /* MiNewsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A13102991E6AB4E1008ABE4E /* MiNewsTests.swift */; };
+		A13102A51E6AB4E1008ABE4E /* MiNewsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A13102A41E6AB4E1008ABE4E /* MiNewsUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		A13102961E6AB4E1008ABE4E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A13102751E6AB4E0008ABE4E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A131027C1E6AB4E0008ABE4E;
+			remoteInfo = MiNews;
+		};
+		A13102A11E6AB4E1008ABE4E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A13102751E6AB4E0008ABE4E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A131027C1E6AB4E0008ABE4E;
+			remoteInfo = MiNews;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		A131027D1E6AB4E1008ABE4E /* MiNews.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MiNews.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A13102801E6AB4E1008ABE4E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		A13102821E6AB4E1008ABE4E /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
+		A13102841E6AB4E1008ABE4E /* DataViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataViewController.swift; sourceTree = "<group>"; };
+		A13102861E6AB4E1008ABE4E /* ModelController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelController.swift; sourceTree = "<group>"; };
+		A13102891E6AB4E1008ABE4E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		A131028B1E6AB4E1008ABE4E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		A131028E1E6AB4E1008ABE4E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		A13102901E6AB4E1008ABE4E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A13102951E6AB4E1008ABE4E /* MiNewsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MiNewsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A13102991E6AB4E1008ABE4E /* MiNewsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiNewsTests.swift; sourceTree = "<group>"; };
+		A131029B1E6AB4E1008ABE4E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A13102A01E6AB4E1008ABE4E /* MiNewsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MiNewsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A13102A41E6AB4E1008ABE4E /* MiNewsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiNewsUITests.swift; sourceTree = "<group>"; };
+		A13102A61E6AB4E1008ABE4E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A131027A1E6AB4E0008ABE4E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A13102921E6AB4E1008ABE4E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A131029D1E6AB4E1008ABE4E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A13102741E6AB4E0008ABE4E = {
+			isa = PBXGroup;
+			children = (
+				A131027F1E6AB4E1008ABE4E /* MiNews */,
+				A13102981E6AB4E1008ABE4E /* MiNewsTests */,
+				A13102A31E6AB4E1008ABE4E /* MiNewsUITests */,
+				A131027E1E6AB4E1008ABE4E /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		A131027E1E6AB4E1008ABE4E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A131027D1E6AB4E1008ABE4E /* MiNews.app */,
+				A13102951E6AB4E1008ABE4E /* MiNewsTests.xctest */,
+				A13102A01E6AB4E1008ABE4E /* MiNewsUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A131027F1E6AB4E1008ABE4E /* MiNews */ = {
+			isa = PBXGroup;
+			children = (
+				A13102801E6AB4E1008ABE4E /* AppDelegate.swift */,
+				A13102821E6AB4E1008ABE4E /* RootViewController.swift */,
+				A13102841E6AB4E1008ABE4E /* DataViewController.swift */,
+				A13102861E6AB4E1008ABE4E /* ModelController.swift */,
+				A13102881E6AB4E1008ABE4E /* Main.storyboard */,
+				A131028B1E6AB4E1008ABE4E /* Assets.xcassets */,
+				A131028D1E6AB4E1008ABE4E /* LaunchScreen.storyboard */,
+				A13102901E6AB4E1008ABE4E /* Info.plist */,
+			);
+			path = MiNews;
+			sourceTree = "<group>";
+		};
+		A13102981E6AB4E1008ABE4E /* MiNewsTests */ = {
+			isa = PBXGroup;
+			children = (
+				A13102991E6AB4E1008ABE4E /* MiNewsTests.swift */,
+				A131029B1E6AB4E1008ABE4E /* Info.plist */,
+			);
+			path = MiNewsTests;
+			sourceTree = "<group>";
+		};
+		A13102A31E6AB4E1008ABE4E /* MiNewsUITests */ = {
+			isa = PBXGroup;
+			children = (
+				A13102A41E6AB4E1008ABE4E /* MiNewsUITests.swift */,
+				A13102A61E6AB4E1008ABE4E /* Info.plist */,
+			);
+			path = MiNewsUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A131027C1E6AB4E0008ABE4E /* MiNews */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A13102A91E6AB4E1008ABE4E /* Build configuration list for PBXNativeTarget "MiNews" */;
+			buildPhases = (
+				A13102791E6AB4E0008ABE4E /* Sources */,
+				A131027A1E6AB4E0008ABE4E /* Frameworks */,
+				A131027B1E6AB4E0008ABE4E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MiNews;
+			productName = MiNews;
+			productReference = A131027D1E6AB4E1008ABE4E /* MiNews.app */;
+			productType = "com.apple.product-type.application";
+		};
+		A13102941E6AB4E1008ABE4E /* MiNewsTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A13102AC1E6AB4E1008ABE4E /* Build configuration list for PBXNativeTarget "MiNewsTests" */;
+			buildPhases = (
+				A13102911E6AB4E1008ABE4E /* Sources */,
+				A13102921E6AB4E1008ABE4E /* Frameworks */,
+				A13102931E6AB4E1008ABE4E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A13102971E6AB4E1008ABE4E /* PBXTargetDependency */,
+			);
+			name = MiNewsTests;
+			productName = MiNewsTests;
+			productReference = A13102951E6AB4E1008ABE4E /* MiNewsTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		A131029F1E6AB4E1008ABE4E /* MiNewsUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A13102AF1E6AB4E1008ABE4E /* Build configuration list for PBXNativeTarget "MiNewsUITests" */;
+			buildPhases = (
+				A131029C1E6AB4E1008ABE4E /* Sources */,
+				A131029D1E6AB4E1008ABE4E /* Frameworks */,
+				A131029E1E6AB4E1008ABE4E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A13102A21E6AB4E1008ABE4E /* PBXTargetDependency */,
+			);
+			name = MiNewsUITests;
+			productName = MiNewsUITests;
+			productReference = A13102A01E6AB4E1008ABE4E /* MiNewsUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A13102751E6AB4E0008ABE4E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0820;
+				LastUpgradeCheck = 0820;
+				ORGANIZATIONNAME = ECON327H;
+				TargetAttributes = {
+					A131027C1E6AB4E0008ABE4E = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = VZK4KNL696;
+						ProvisioningStyle = Automatic;
+					};
+					A13102941E6AB4E1008ABE4E = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = VZK4KNL696;
+						ProvisioningStyle = Automatic;
+						TestTargetID = A131027C1E6AB4E0008ABE4E;
+					};
+					A131029F1E6AB4E1008ABE4E = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = VZK4KNL696;
+						ProvisioningStyle = Automatic;
+						TestTargetID = A131027C1E6AB4E0008ABE4E;
+					};
+				};
+			};
+			buildConfigurationList = A13102781E6AB4E0008ABE4E /* Build configuration list for PBXProject "MiNews" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = A13102741E6AB4E0008ABE4E;
+			productRefGroup = A131027E1E6AB4E1008ABE4E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A131027C1E6AB4E0008ABE4E /* MiNews */,
+				A13102941E6AB4E1008ABE4E /* MiNewsTests */,
+				A131029F1E6AB4E1008ABE4E /* MiNewsUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A131027B1E6AB4E0008ABE4E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A131028F1E6AB4E1008ABE4E /* LaunchScreen.storyboard in Resources */,
+				A131028C1E6AB4E1008ABE4E /* Assets.xcassets in Resources */,
+				A131028A1E6AB4E1008ABE4E /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A13102931E6AB4E1008ABE4E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A131029E1E6AB4E1008ABE4E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A13102791E6AB4E0008ABE4E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A13102831E6AB4E1008ABE4E /* RootViewController.swift in Sources */,
+				A13102871E6AB4E1008ABE4E /* ModelController.swift in Sources */,
+				A13102851E6AB4E1008ABE4E /* DataViewController.swift in Sources */,
+				A13102811E6AB4E1008ABE4E /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A13102911E6AB4E1008ABE4E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A131029A1E6AB4E1008ABE4E /* MiNewsTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A131029C1E6AB4E1008ABE4E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A13102A51E6AB4E1008ABE4E /* MiNewsUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		A13102971E6AB4E1008ABE4E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A131027C1E6AB4E0008ABE4E /* MiNews */;
+			targetProxy = A13102961E6AB4E1008ABE4E /* PBXContainerItemProxy */;
+		};
+		A13102A21E6AB4E1008ABE4E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A131027C1E6AB4E0008ABE4E /* MiNews */;
+			targetProxy = A13102A11E6AB4E1008ABE4E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		A13102881E6AB4E1008ABE4E /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A13102891E6AB4E1008ABE4E /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		A131028D1E6AB4E1008ABE4E /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A131028E1E6AB4E1008ABE4E /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		A13102A71E6AB4E1008ABE4E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		A13102A81E6AB4E1008ABE4E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		A13102AA1E6AB4E1008ABE4E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = VZK4KNL696;
+				INFOPLIST_FILE = MiNews/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ami.MiNews;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		A13102AB1E6AB4E1008ABE4E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = VZK4KNL696;
+				INFOPLIST_FILE = MiNews/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ami.MiNews;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		A13102AD1E6AB4E1008ABE4E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = VZK4KNL696;
+				INFOPLIST_FILE = MiNewsTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ami.MiNewsTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MiNews.app/MiNews";
+			};
+			name = Debug;
+		};
+		A13102AE1E6AB4E1008ABE4E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = VZK4KNL696;
+				INFOPLIST_FILE = MiNewsTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ami.MiNewsTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MiNews.app/MiNews";
+			};
+			name = Release;
+		};
+		A13102B01E6AB4E1008ABE4E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				DEVELOPMENT_TEAM = VZK4KNL696;
+				INFOPLIST_FILE = MiNewsUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ami.MiNewsUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = MiNews;
+			};
+			name = Debug;
+		};
+		A13102B11E6AB4E1008ABE4E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				DEVELOPMENT_TEAM = VZK4KNL696;
+				INFOPLIST_FILE = MiNewsUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ami.MiNewsUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = MiNews;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A13102781E6AB4E0008ABE4E /* Build configuration list for PBXProject "MiNews" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A13102A71E6AB4E1008ABE4E /* Debug */,
+				A13102A81E6AB4E1008ABE4E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A13102A91E6AB4E1008ABE4E /* Build configuration list for PBXNativeTarget "MiNews" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A13102AA1E6AB4E1008ABE4E /* Debug */,
+				A13102AB1E6AB4E1008ABE4E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		A13102AC1E6AB4E1008ABE4E /* Build configuration list for PBXNativeTarget "MiNewsTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A13102AD1E6AB4E1008ABE4E /* Debug */,
+				A13102AE1E6AB4E1008ABE4E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		A13102AF1E6AB4E1008ABE4E /* Build configuration list for PBXNativeTarget "MiNewsUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A13102B01E6AB4E1008ABE4E /* Debug */,
+				A13102B11E6AB4E1008ABE4E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = A13102751E6AB4E0008ABE4E /* Project object */;
+}
