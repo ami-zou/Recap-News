@@ -1,14 +1,19 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="703-4V-yAM">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="703-4V-yAM">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--Root View Controller-->
         <scene sceneID="clB-vc-fyl">
             <objects>
-                <viewController id="703-4V-yAM" customClass="RootViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="703-4V-yAM" customClass="RootViewController" customModule="MiNews" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="I7W-xW-C47"/>
                         <viewControllerLayoutGuide type="bottom" id="IfR-02-kHw"/>
@@ -23,10 +28,92 @@
             </objects>
             <point key="canvasLocation" x="-101" y="-243"/>
         </scene>
+        <!--Page View Controller-->
+        <scene sceneID="wWQ-3t-0kI">
+            <objects>
+                <pageViewController storyboardIdentifier="PageViewController" autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="DVg-os-kXc" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3jc-z3-0S9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-44" y="444"/>
+        </scene>
+        <!--Page View Controller-->
+        <scene sceneID="fEt-X2-oJc">
+            <objects>
+                <pageViewController storyboardIdentifier="ContentNewsViewController " autoresizesArchivedViewToFullSize="NO" transitionStyle="pageCurl" navigationOrientation="horizontal" spineLocation="min" id="tYT-se-rgk" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ACQ-Nh-eRm" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="617" y="440"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="ROF-Xv-P4z">
+            <objects>
+                <viewController id="ehs-TB-jqc" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="L4o-JN-09x"/>
+                        <viewControllerLayoutGuide type="bottom" id="Dv3-A0-6pb"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="fvY-no-0oe">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rvM-SV-186">
+                                <rect key="frame" x="0.0" y="94" width="375" height="573"/>
+                            </scrollView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MiNews" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6XE-mL-OWL">
+                                <rect key="frame" x="0.0" y="20" width="375" height="33"/>
+                                <color key="backgroundColor" red="1" green="0.43903888497079746" blue="0.53620619190552599" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="33" id="q36-J9-bS1"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="au9-l2-gj8">
+                                <rect key="frame" x="0.0" y="53" width="375" height="44"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="ehs-TB-jqc" id="Zak-YI-eSX"/>
+                                </connections>
+                            </searchBar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="rvM-SV-186" firstAttribute="top" secondItem="6XE-mL-OWL" secondAttribute="bottom" constant="41" id="3kh-FH-noO"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="6XE-mL-OWL" secondAttribute="trailing" constant="-16" id="5ho-Oy-S0C"/>
+                            <constraint firstItem="6XE-mL-OWL" firstAttribute="leading" secondItem="rvM-SV-186" secondAttribute="leading" id="JVT-z9-zmT"/>
+                            <constraint firstItem="6XE-mL-OWL" firstAttribute="top" secondItem="L4o-JN-09x" secondAttribute="bottom" id="NSK-h7-xk9"/>
+                            <constraint firstItem="6XE-mL-OWL" firstAttribute="leading" secondItem="fvY-no-0oe" secondAttribute="leadingMargin" constant="-16" id="Pc6-8V-i0w"/>
+                            <constraint firstItem="6XE-mL-OWL" firstAttribute="bottom" secondItem="au9-l2-gj8" secondAttribute="top" id="WuA-No-NqC"/>
+                            <constraint firstItem="rvM-SV-186" firstAttribute="bottom" secondItem="Dv3-A0-6pb" secondAttribute="top" id="Yaj-kc-XEk"/>
+                            <constraint firstItem="rvM-SV-186" firstAttribute="leading" secondItem="fvY-no-0oe" secondAttribute="leadingMargin" constant="-16" id="iaO-ih-tJh"/>
+                            <constraint firstItem="6XE-mL-OWL" firstAttribute="trailing" secondItem="rvM-SV-186" secondAttribute="trailing" id="vFa-RQ-xwn"/>
+                            <constraint firstItem="6XE-mL-OWL" firstAttribute="trailing" secondItem="au9-l2-gj8" secondAttribute="trailing" id="vad-mD-icq"/>
+                            <constraint firstItem="6XE-mL-OWL" firstAttribute="leading" secondItem="au9-l2-gj8" secondAttribute="leading" id="wFR-DW-X77"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="rvM-SV-186" secondAttribute="trailing" constant="-16" id="xTP-6f-gnH"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="searchDisplayController" destination="gYS-Ng-fAo" id="hd4-KQ-wnw"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ond-t2-lyB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <searchDisplayController id="gYS-Ng-fAo">
+                    <connections>
+                        <outlet property="delegate" destination="ehs-TB-jqc" id="BID-MX-Ofl"/>
+                        <outlet property="searchBar" destination="au9-l2-gj8" id="9ce-q8-aGV"/>
+                        <outlet property="searchContentsController" destination="ehs-TB-jqc" id="RCp-BU-Ltn"/>
+                        <outlet property="searchResultsDataSource" destination="ehs-TB-jqc" id="FTQ-Ji-y2T"/>
+                        <outlet property="searchResultsDelegate" destination="ehs-TB-jqc" id="dTx-gk-vjo"/>
+                    </connections>
+                </searchDisplayController>
+            </objects>
+            <point key="canvasLocation" x="1248.8" y="433.13343328335833"/>
+        </scene>
         <!--Data View Controller-->
         <scene sceneID="snT-py-3hH">
             <objects>
-                <viewController storyboardIdentifier="DataViewController" id="S4R-Ja-viH" customClass="DataViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="DataViewController" id="S4R-Ja-viH" customClass="DataViewController" customModule="MiNews" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="fXf-Jd-eTc"/>
                         <viewControllerLayoutGuide type="bottom" id="EPS-s9-h4K"/>
@@ -36,11 +123,13 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="cF2-Le-7mQ">
+                                <rect key="frame" x="20" y="20" width="335" height="16.5"/>
                                 <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="14"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="s1b-V9-EN7">
+                                <rect key="frame" x="20" y="44.5" width="335" height="602.5"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </view>
                         </subviews>
@@ -62,6 +151,13 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GmD-Rr-ZGN" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="597" y="-243"/>
+        </scene>
+        <!--Storyboard Reference-->
+        <scene sceneID="4M1-ar-Zyb">
+            <objects>
+                <viewControllerPlaceholder id="i5S-UA-7q5" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WmD-UQ-MSw" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
         </scene>
     </scenes>
 </document>
