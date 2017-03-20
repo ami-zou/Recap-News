@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A119720E1E7BC12B00739E35 /* CameraVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A119720D1E7BC12B00739E35 /* CameraVC.swift */; };
+		A11972101E7DFABF00739E35 /* SearchVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A119720F1E7DFABF00739E35 /* SearchVC.swift */; };
 		A13102811E6AB4E1008ABE4E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A13102801E6AB4E1008ABE4E /* AppDelegate.swift */; };
 		A131028A1E6AB4E1008ABE4E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A13102881E6AB4E1008ABE4E /* Main.storyboard */; };
 		A131028C1E6AB4E1008ABE4E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A131028B1E6AB4E1008ABE4E /* Assets.xcassets */; };
@@ -14,7 +16,6 @@
 		A131029A1E6AB4E1008ABE4E /* MiNewsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A13102991E6AB4E1008ABE4E /* MiNewsTests.swift */; };
 		A13102A51E6AB4E1008ABE4E /* MiNewsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A13102A41E6AB4E1008ABE4E /* MiNewsUITests.swift */; };
 		A1B8A0AE1E78ACAC002B4C05 /* PageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1B8A0AD1E78ACAB002B4C05 /* PageVC.swift */; };
-		A1B8A0B01E7B48B9002B4C05 /* CameraVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1B8A0AF1E7B48B9002B4C05 /* CameraVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +36,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A119720D1E7BC12B00739E35 /* CameraVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CameraVC.swift; path = ../CameraVC.swift; sourceTree = "<group>"; };
+		A119720F1E7DFABF00739E35 /* SearchVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchVC.swift; sourceTree = "<group>"; };
 		A131027D1E6AB4E1008ABE4E /* MiNews.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MiNews.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A13102801E6AB4E1008ABE4E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A13102891E6AB4E1008ABE4E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -48,7 +51,6 @@
 		A13102A41E6AB4E1008ABE4E /* MiNewsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiNewsUITests.swift; sourceTree = "<group>"; };
 		A13102A61E6AB4E1008ABE4E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A1B8A0AD1E78ACAB002B4C05 /* PageVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageVC.swift; sourceTree = "<group>"; };
-		A1B8A0AF1E7B48B9002B4C05 /* CameraVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,7 +103,8 @@
 			children = (
 				A13102801E6AB4E1008ABE4E /* AppDelegate.swift */,
 				A13102881E6AB4E1008ABE4E /* Main.storyboard */,
-				A1B8A0AF1E7B48B9002B4C05 /* CameraVC.swift */,
+				A119720F1E7DFABF00739E35 /* SearchVC.swift */,
+				A119720D1E7BC12B00739E35 /* CameraVC.swift */,
 				A1B8A0AD1E78ACAB002B4C05 /* PageVC.swift */,
 				A131028B1E6AB4E1008ABE4E /* Assets.xcassets */,
 				A131028D1E6AB4E1008ABE4E /* LaunchScreen.storyboard */,
@@ -265,8 +268,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A1B8A0B01E7B48B9002B4C05 /* CameraVC.swift in Sources */,
+				A11972101E7DFABF00739E35 /* SearchVC.swift in Sources */,
 				A1B8A0AE1E78ACAC002B4C05 /* PageVC.swift in Sources */,
+				A119720E1E7BC12B00739E35 /* CameraVC.swift in Sources */,
 				A13102811E6AB4E1008ABE4E /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

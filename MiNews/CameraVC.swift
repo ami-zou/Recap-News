@@ -12,7 +12,8 @@ import AVFoundation
 class CameraVC: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate  {
     
     var captureSession : AVCaptureSession?
-    var stillImageOutput: AVCaptureStillImageOutput?
+    //var stillImageOutput: AVCaptureStillImageOutput?
+    var photoOutput: AVCapturePhotoOutput?
     var previewLayer : AVCaptureVideoPreviewLayer?
     
     @IBOutlet var cameraView: UIView!
@@ -41,19 +42,14 @@ class CameraVC: UIViewController, UIImagePickerControllerDelegate, UINavigationC
         
         var error : NSError?
       
-        var input = AVCaptureDeviceInput(device: backCamera)
-        //var input = AVCaptureDeviceInput()
-       // do {
-       //     input = try AVCaptureDeviceInput(device: backCamera)
-       // }
-       // catch {
-       //     &error
-       // }
-        
+ //       var input = AVCaptureDeviceInput(device: backCamera)
+ /*
         if error == nil && captureSession?.canAddInput(input){
             captureSession?.addInput(input)
-            stillImageOutput = AVCaptureStillImageOutput()
-            stillImageOutput?.outputSettings = [AVVideoCodecKey : AVVideoCodecJPEG]
+            //stillImageOutput = AVCaptureStillImageOutput()
+            photoOutput = AVCapturePhotoOutput()
+            photoOutput?.preparedPhotoSettingsArray = [AVVideoCodecKey : AVVideoCodecJPEG]
+            //stillImageOutput?.outputSettings = [AVVideoCodecKey : AVVideoCodecJPEG]
             
             captureSession?.canAddOutput(stillImageOutput){
                 captureSession?.addOutput(stillImageOutput)
@@ -65,6 +61,6 @@ class CameraVC: UIViewController, UIImagePickerControllerDelegate, UINavigationC
             cameraView.layer.addSublayer(previewLayer)
             captureSession?.startRunning()
         }
-        
+  */
     }
 }
