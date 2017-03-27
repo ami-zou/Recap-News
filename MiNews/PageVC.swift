@@ -13,7 +13,8 @@ class PageVC: UIPageViewController, UIPageViewControllerDataSource, UIPageViewCo
         return [self.VCInstance(name: "FirstNewsVC"),
                 self.VCInstance(name: "SecondCameraVC"),
                 self.VCInstance(name: "ThirdReportVC"),
-                self.VCInstance(name: "SearchVC")]
+                self.VCInstance(name: "MiNewsCameraVC"),
+                self.VCInstance(name: "MiNews")]
     }()
     
     private func VCInstance(name: String) -> UIViewController{
