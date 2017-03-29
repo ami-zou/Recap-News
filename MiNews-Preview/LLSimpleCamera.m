@@ -278,11 +278,11 @@ NSString *const LLSimpleCameraErrorDomain = @"LLSimpleCameraErrorDomain";
     // freeze the screen
     [self.captureVideoPreviewLayer.connection setEnabled:NO];
 
-
-//    [self.stillImageOutput capturePhotoAsynchronouslyFromConnection:videoConnection completionHandler: ^(CMSampleBufferRef imageSampleBuffer, NSError *error) {
+/*
+    [self.stillImageOutput capturePhotoAsynchronouslyFromConnection:videoConnection completionHandler: ^(CMSampleBufferRef imageSampleBuffer, NSError *error) {
 //    func capture(_ captureOutput: AVCapturePhotoOutput, didFinishProcessingPhotoSampleBuffer photoSampleBuffer: CMSampleBuffer?, previewPhotoSampleBuffer: CMSampleBuffer?, resolvedSettings: AVCaptureResolvedPhotoSettings, bracketSettings: AVCaptureBracketedStillImageSettings?, error: Error?) {
         
-    [self.stillImageOutput 
+//    [self.stillImageOutput
          UIImage *image = nil;
          NSDictionary *metadata = nil;
          
@@ -314,7 +314,7 @@ NSString *const LLSimpleCameraErrorDomain = @"LLSimpleCameraErrorDomain";
          }
      }];
  
- 
+ */
     
 }
 

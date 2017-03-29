@@ -9,20 +9,15 @@
 /* Begin PBXBuildFile section */
 		A119720E1E7BC12B00739E35 /* CameraVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A119720D1E7BC12B00739E35 /* CameraVC.swift */; };
 		A11972101E7DFABF00739E35 /* SearchVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A119720F1E7DFABF00739E35 /* SearchVC.swift */; };
+		A12076D81E8B2E6500869470 /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A12076D51E8B2E6500869470 /* CameraViewController.swift */; };
+		A12076D91E8B2E6500869470 /* PhotoCaptureDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A12076D61E8B2E6500869470 /* PhotoCaptureDelegate.swift */; };
+		A12076DA1E8B2E6500869470 /* PreviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A12076D71E8B2E6500869470 /* PreviewView.swift */; };
 		A13102811E6AB4E1008ABE4E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A13102801E6AB4E1008ABE4E /* AppDelegate.swift */; };
 		A131028A1E6AB4E1008ABE4E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A13102881E6AB4E1008ABE4E /* Main.storyboard */; };
 		A131028C1E6AB4E1008ABE4E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A131028B1E6AB4E1008ABE4E /* Assets.xcassets */; };
 		A131028F1E6AB4E1008ABE4E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A131028D1E6AB4E1008ABE4E /* LaunchScreen.storyboard */; };
 		A131029A1E6AB4E1008ABE4E /* MiNewsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A13102991E6AB4E1008ABE4E /* MiNewsTests.swift */; };
 		A13102A51E6AB4E1008ABE4E /* MiNewsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A13102A41E6AB4E1008ABE4E /* MiNewsUITests.swift */; };
-		A17C38251E879A100036F133 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A17C381F1E879A100036F133 /* HomeViewController.m */; };
-		A17C38261E879A100036F133 /* ImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A17C38201E879A100036F133 /* ImageViewController.m */; };
-		A17C38271E879A100036F133 /* VideoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A17C38211E879A100036F133 /* VideoViewController.m */; };
-		A17C382F1E879BB30036F133 /* UIImage+Resize.m in Sources */ = {isa = PBXBuildFile; fileRef = A17C38291E879BB30036F133 /* UIImage+Resize.m */; };
-		A17C38301E879BB30036F133 /* UIImage+Crop.m in Sources */ = {isa = PBXBuildFile; fileRef = A17C382B1E879BB30036F133 /* UIImage+Crop.m */; };
-		A17C38311E879BB30036F133 /* ViewUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = A17C382E1E879BB30036F133 /* ViewUtils.m */; };
-		A17C38361E879BCD0036F133 /* LLSimpleCamera.m in Sources */ = {isa = PBXBuildFile; fileRef = A17C38321E879BCD0036F133 /* LLSimpleCamera.m */; };
-		A17C38371E879BCD0036F133 /* UIImage+FixOrientation.m in Sources */ = {isa = PBXBuildFile; fileRef = A17C38351E879BCD0036F133 /* UIImage+FixOrientation.m */; };
 		A17C38391E879DDB0036F133 /* PreviewImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A17C38381E879DDB0036F133 /* PreviewImageViewController.swift */; };
 		A1B8A0AE1E78ACAC002B4C05 /* PageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1B8A0AD1E78ACAB002B4C05 /* PageVC.swift */; };
 /* End PBXBuildFile section */
@@ -47,6 +42,9 @@
 /* Begin PBXFileReference section */
 		A119720D1E7BC12B00739E35 /* CameraVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CameraVC.swift; path = ../CameraVC.swift; sourceTree = "<group>"; };
 		A119720F1E7DFABF00739E35 /* SearchVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchVC.swift; sourceTree = "<group>"; };
+		A12076D51E8B2E6500869470 /* CameraViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
+		A12076D61E8B2E6500869470 /* PhotoCaptureDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoCaptureDelegate.swift; sourceTree = "<group>"; };
+		A12076D71E8B2E6500869470 /* PreviewView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreviewView.swift; sourceTree = "<group>"; };
 		A131027D1E6AB4E1008ABE4E /* MiNews.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MiNews.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A13102801E6AB4E1008ABE4E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A13102891E6AB4E1008ABE4E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -59,23 +57,6 @@
 		A13102A01E6AB4E1008ABE4E /* MiNewsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MiNewsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A13102A41E6AB4E1008ABE4E /* MiNewsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiNewsUITests.swift; sourceTree = "<group>"; };
 		A13102A61E6AB4E1008ABE4E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		A17C381E1E879A0F0036F133 /* MiNews-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MiNews-Bridging-Header.h"; sourceTree = "<group>"; };
-		A17C381F1E879A100036F133 /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
-		A17C38201E879A100036F133 /* ImageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageViewController.m; sourceTree = "<group>"; };
-		A17C38211E879A100036F133 /* VideoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VideoViewController.m; sourceTree = "<group>"; };
-		A17C38221E879A100036F133 /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
-		A17C38231E879A100036F133 /* ImageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageViewController.h; sourceTree = "<group>"; };
-		A17C38241E879A100036F133 /* VideoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoViewController.h; sourceTree = "<group>"; };
-		A17C38291E879BB30036F133 /* UIImage+Resize.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Resize.m"; sourceTree = "<group>"; };
-		A17C382A1E879BB30036F133 /* UIImage+Crop.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Crop.h"; sourceTree = "<group>"; };
-		A17C382B1E879BB30036F133 /* UIImage+Crop.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Crop.m"; sourceTree = "<group>"; };
-		A17C382C1E879BB30036F133 /* UIImage+Resize.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Resize.h"; sourceTree = "<group>"; };
-		A17C382D1E879BB30036F133 /* ViewUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewUtils.h; sourceTree = "<group>"; };
-		A17C382E1E879BB30036F133 /* ViewUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewUtils.m; sourceTree = "<group>"; };
-		A17C38321E879BCD0036F133 /* LLSimpleCamera.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LLSimpleCamera.m; sourceTree = "<group>"; };
-		A17C38331E879BCD0036F133 /* LLSimpleCamera.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LLSimpleCamera.h; sourceTree = "<group>"; };
-		A17C38341E879BCD0036F133 /* UIImage+FixOrientation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+FixOrientation.h"; sourceTree = "<group>"; };
-		A17C38351E879BCD0036F133 /* UIImage+FixOrientation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+FixOrientation.m"; sourceTree = "<group>"; };
 		A17C38381E879DDB0036F133 /* PreviewImageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreviewImageViewController.swift; sourceTree = "<group>"; };
 		A1B8A0AD1E78ACAB002B4C05 /* PageVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -108,9 +89,6 @@
 		A13102741E6AB4E0008ABE4E = {
 			isa = PBXGroup;
 			children = (
-				A17C38281E879B790036F133 /* CameraUtilities */,
-				A17C381D1E873EFD0036F133 /* MiNews-Preview */,
-				A17C381C1E873EED0036F133 /* MiNews-Camera */,
 				A131027F1E6AB4E1008ABE4E /* MiNews */,
 				A13102981E6AB4E1008ABE4E /* MiNewsTests */,
 				A13102A31E6AB4E1008ABE4E /* MiNewsUITests */,
@@ -131,6 +109,9 @@
 		A131027F1E6AB4E1008ABE4E /* MiNews */ = {
 			isa = PBXGroup;
 			children = (
+				A12076D51E8B2E6500869470 /* CameraViewController.swift */,
+				A12076D61E8B2E6500869470 /* PhotoCaptureDelegate.swift */,
+				A12076D71E8B2E6500869470 /* PreviewView.swift */,
 				A17C38381E879DDB0036F133 /* PreviewImageViewController.swift */,
 				A13102801E6AB4E1008ABE4E /* AppDelegate.swift */,
 				A13102881E6AB4E1008ABE4E /* Main.storyboard */,
@@ -160,44 +141,6 @@
 				A13102A61E6AB4E1008ABE4E /* Info.plist */,
 			);
 			path = MiNewsUITests;
-			sourceTree = "<group>";
-		};
-		A17C381C1E873EED0036F133 /* MiNews-Camera */ = {
-			isa = PBXGroup;
-			children = (
-				A17C381F1E879A100036F133 /* HomeViewController.m */,
-				A17C38221E879A100036F133 /* HomeViewController.h */,
-				A17C38201E879A100036F133 /* ImageViewController.m */,
-				A17C38231E879A100036F133 /* ImageViewController.h */,
-				A17C38211E879A100036F133 /* VideoViewController.m */,
-				A17C38241E879A100036F133 /* VideoViewController.h */,
-				A17C381E1E879A0F0036F133 /* MiNews-Bridging-Header.h */,
-			);
-			name = "MiNews-Camera";
-			sourceTree = "<group>";
-		};
-		A17C381D1E873EFD0036F133 /* MiNews-Preview */ = {
-			isa = PBXGroup;
-			children = (
-				A17C38321E879BCD0036F133 /* LLSimpleCamera.m */,
-				A17C38331E879BCD0036F133 /* LLSimpleCamera.h */,
-				A17C38341E879BCD0036F133 /* UIImage+FixOrientation.h */,
-				A17C38351E879BCD0036F133 /* UIImage+FixOrientation.m */,
-			);
-			name = "MiNews-Preview";
-			sourceTree = "<group>";
-		};
-		A17C38281E879B790036F133 /* CameraUtilities */ = {
-			isa = PBXGroup;
-			children = (
-				A17C38291E879BB30036F133 /* UIImage+Resize.m */,
-				A17C382A1E879BB30036F133 /* UIImage+Crop.h */,
-				A17C382B1E879BB30036F133 /* UIImage+Crop.m */,
-				A17C382C1E879BB30036F133 /* UIImage+Resize.h */,
-				A17C382D1E879BB30036F133 /* ViewUtils.h */,
-				A17C382E1E879BB30036F133 /* ViewUtils.m */,
-			);
-			name = CameraUtilities;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -338,19 +281,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A17C38301E879BB30036F133 /* UIImage+Crop.m in Sources */,
-				A17C38261E879A100036F133 /* ImageViewController.m in Sources */,
-				A17C382F1E879BB30036F133 /* UIImage+Resize.m in Sources */,
 				A17C38391E879DDB0036F133 /* PreviewImageViewController.swift in Sources */,
+				A12076DA1E8B2E6500869470 /* PreviewView.swift in Sources */,
 				A11972101E7DFABF00739E35 /* SearchVC.swift in Sources */,
 				A1B8A0AE1E78ACAC002B4C05 /* PageVC.swift in Sources */,
 				A119720E1E7BC12B00739E35 /* CameraVC.swift in Sources */,
-				A17C38311E879BB30036F133 /* ViewUtils.m in Sources */,
-				A17C38271E879A100036F133 /* VideoViewController.m in Sources */,
-				A17C38251E879A100036F133 /* HomeViewController.m in Sources */,
 				A13102811E6AB4E1008ABE4E /* AppDelegate.swift in Sources */,
-				A17C38371E879BCD0036F133 /* UIImage+FixOrientation.m in Sources */,
-				A17C38361E879BCD0036F133 /* LLSimpleCamera.m in Sources */,
+				A12076D91E8B2E6500869470 /* PhotoCaptureDelegate.swift in Sources */,
+				A12076D81E8B2E6500869470 /* CameraViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
