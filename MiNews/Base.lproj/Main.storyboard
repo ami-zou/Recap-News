@@ -16,7 +16,7 @@
                 <pageViewController storyboardIdentifier="PageVC" autoresizesArchivedViewToFullSize="NO" title="PageVC" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="DVg-os-kXc" customClass="PageVC" customModule="MiNews" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3jc-z3-0S9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-308" y="444"/>
+            <point key="canvasLocation" x="-606" y="444"/>
         </scene>
         <!--FirstNewsVC-->
         <scene sceneID="ROF-Xv-P4z">
@@ -175,7 +175,7 @@
         <!--Camera View Controller-->
         <scene sceneID="D5H-dX-qt5">
             <objects>
-                <viewController storyboardIdentifier="CameraViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="bU9-Sl-V4a" customClass="CameraViewController" customModule="MiNews" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController restorationIdentifier="CameraViewController" storyboardIdentifier="CameraViewController" title="Camera View Controller" id="bU9-Sl-V4a" customClass="CameraViewController" customModule="MiNews" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="tFG-u1-SA9"/>
                         <viewControllerLayoutGuide type="bottom" id="uNm-Vg-de9"/>
@@ -186,7 +186,7 @@
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="shp-ws-hVN" customClass="PreviewView" customModule="MiNews" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 <gestureRecognizers/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="375" id="RBG-SL-acw"/>
@@ -271,7 +271,6 @@
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="shp-ws-hVN" firstAttribute="leading" secondItem="uSg-Rk-VQo" secondAttribute="leading" id="9H2-jF-pnT"/>
                             <constraint firstItem="shp-ws-hVN" firstAttribute="bottom" secondItem="uNm-Vg-de9" secondAttribute="top" id="b3F-ON-NAP"/>
@@ -297,6 +296,51 @@
                 </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="368.80000000000001" y="-283.80809595202402"/>
+        </scene>
+        <!--SimpleCameraVC-->
+        <scene sceneID="RKN-3V-FmA">
+            <objects>
+                <viewController storyboardIdentifier="SimpleCameraVC" title="SimpleCameraVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="3xm-nO-KhW" customClass="SimpleCameraVC" customModule="MiNews" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="CsM-kp-pQw"/>
+                        <viewControllerLayoutGuide type="bottom" id="HFt-bL-hpM"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Fas-FP-55Q">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ICH-Zz-l9u">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aUf-N2-bz1">
+                                <rect key="frame" x="121" y="570" width="133" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Take Photo"/>
+                                <connections>
+                                    <action selector="takePhoto:" destination="3xm-nO-KhW" eventType="touchUpInside" id="zNe-JR-022"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="09P-ye-wJH">
+                                <rect key="frame" x="123" y="608" width="128" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Select Photo"/>
+                                <connections>
+                                    <action selector="selectPhoto:" destination="3xm-nO-KhW" eventType="touchUpInside" id="dHn-mj-uvJ"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="ICH-Zz-l9u" id="d0o-Yk-frZ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2dF-H2-9h2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1061.5999999999999" y="-283.80809595202402"/>
         </scene>
         <!--Storyboard Reference-->
         <scene sceneID="4M1-ar-Zyb">

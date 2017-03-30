@@ -12,7 +12,8 @@ class PageVC: UIPageViewController, UIPageViewControllerDataSource, UIPageViewCo
     lazy var VCArr : [UIViewController] = { //lazy: initiated when called   //put "=" to initialize /compute property
         return [self.VCInstance(name: "FirstNewsVC"),
                 self.VCInstance(name: "SecondCameraVC"),
-                self.VCInstance(name: "CameraViewController"),
+                //self.VCInstance(name: "CameraViewController"),
+                self.VCInstance(name: "SimpleCameraVC"),
                 self.VCInstance(name: "ThirdReportVC")]
                 //self.VCInstance(name: "MiNewsCameraVC"),
                 //self.VCInstance(name: "MiNews")]
