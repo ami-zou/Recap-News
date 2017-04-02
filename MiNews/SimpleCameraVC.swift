@@ -14,19 +14,40 @@ import Photos
 class SimpleCameraVC: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, AVCaptureFileOutputRecordingDelegate {
 //UI Setup:
     @IBOutlet weak var preView: PreviewView!
-    @IBOutlet weak var selectButton: UIButton! //--> selectPhoto() //TO DO: link to Photo Gallery
-    @IBOutlet weak var cameraButton: UIButton! //--> switchCamera()
-    @IBOutlet weak var photoButton: UIButton!  //--> capturePhoto()
-    @IBOutlet weak var recordButton: UIButton! //--> record()
     @IBOutlet weak var resumeButton: UIButton! //--> resumeInterruptedSession()
+    @IBOutlet weak var selectButton: UIButton! //--> selectPhoto() //TO DO: link to Photo Gallery
+    @IBOutlet weak var cameraButton: UIButton! //--> switchCamera() :use to switch front and back camera
+    
+    //videos:
+    @IBOutlet weak var recordButton: UIButton! //--> record()
+    var videoDeviceSInput: AVCaptureDeviceInput!
+    private var movieFileOutput: AVCaptureMovieFileOutput? = nil
+    private var backgroundRecordingID: UIBackgroundTaskIdentifier? = nil
+    
+    //photo and live photo:
+    @IBOutlet weak var photoButton: UIButton!  //--> capturePhoto()
     @IBOutlet weak var captureModeControl: UISegmentedControl! //-->toggleCaptureMode()
     private enum CaptureMode: Int {
         case photo = 0
         case movie = 1
     }
+    
+   /*TO DO: Live Photo
+    @IBOutlet weak var livePhotoModeButton: UIButton! //--> toggleLivePhotoMode()
+    @IBOutlet weak var capturingLivePhotoLabel: UILabel!
+    private enum LivePhotoMode {
+        case on
+        case off
+    }
+    private var livePhotoMode: LivePhotoMode = .off
+   */
+    
+    private let photoOutput = AVCapturePhotoOutput()
+    private var inProgressPhotoCaptureDelegates = [Int64 : PhotoCaptureDelegate]()
+    
     //future: add live photo button
     
- //Sessions:
+//Sessions:
     private let videoDeviceDiscoverySession = AVCaptureDeviceDiscoverySession(deviceTypes: [.builtInWideAngleCamera, .builtInDualCamera], mediaType: AVMediaTypeVideo, position: .unspecified)!
     private let session = AVCaptureSession()
     private var isSessionRunning = false
@@ -40,14 +61,6 @@ class SimpleCameraVC: UIViewController, UIImagePickerControllerDelegate, UINavig
     
     private var setupResult: SessionSetupResult = .success
 
- //Videos:
-    var videoDeviceSInput: AVCaptureDeviceInput!
-    private var movieFileOutput: AVCaptureMovieFileOutput? = nil
-    private var backgroundRecordingID: UIBackgroundTaskIdentifier? = nil
-    
- //Photos:
-    private let photoOutput = AVCapturePhotoOutput()
-    private var inProgressPhotoCaptureDelegates = [Int64 : PhotoCaptureDelegate]()
     
 // MARK: Initiate
     override func viewDidLoad() {
@@ -56,6 +69,7 @@ class SimpleCameraVC: UIViewController, UIImagePickerControllerDelegate, UINavig
         selectButton.isEnabled = true; //can always access Photo Gallery. (need to add Privacy in Info.plist first)
         photoButton.isEnabled = false;
         recordButton.isEnabled = false;
+        livePhotoModeButton.isEnabled = false
         
         captureModeControl.isEnabled = false
         preView.session = session;
@@ -191,7 +205,7 @@ class SimpleCameraVC: UIViewController, UIImagePickerControllerDelegate, UINavig
                 
                 self.movieFileOutput = nil
             
-             /*
+             
                 if self.photoOutput.isLivePhotoCaptureSupported {
                     self.photoOutput.isLivePhotoCaptureEnabled = true
                     
@@ -200,12 +214,12 @@ class SimpleCameraVC: UIViewController, UIImagePickerControllerDelegate, UINavig
                         self.livePhotoModeButton.isHidden = false
                     }
                 }
-            */
+            
             }
         }
         else if captureModeControl.selectedSegmentIndex == CaptureMode.movie.rawValue
         {
-            //livePhotoModeButton.isHidden = true
+            livePhotoModeButton.isHidden = true
             
             sessionQueue.async { [unowned self] in
                 let movieFileOutput = AVCaptureMovieFileOutput()
@@ -238,6 +252,7 @@ class SimpleCameraVC: UIViewController, UIImagePickerControllerDelegate, UINavig
         photoButton.isEnabled = false
         recordButton.isEnabled = false
         selectButton.isEnabled = true
+        livePhotoModeButton.isEnabled = false
         captureModeControl.isEnabled = false
         
         sessionQueue.async { [unowned self] in
@@ -305,6 +320,7 @@ class SimpleCameraVC: UIViewController, UIImagePickerControllerDelegate, UINavig
                 self.recordButton.isEnabled = self.movieFileOutput != nil
                 self.selectButton.isEnabled = true
                 self.photoButton.isEnabled = true
+                self.livePhotoModeButton.isEnabled = true
                 self.captureModeControl.isEnabled = true
             }
         }
@@ -438,13 +454,13 @@ class SimpleCameraVC: UIViewController, UIImagePickerControllerDelegate, UINavig
             if photoSettings.availablePreviewPhotoPixelFormatTypes.count > 0 {
                 photoSettings.previewPhotoFormat = [kCVPixelBufferPixelFormatTypeKey as String : photoSettings.availablePreviewPhotoPixelFormatTypes.first!]
             }
-          /*
+          
             if self.livePhotoMode == .on && self.photoOutput.isLivePhotoCaptureSupported { // Live Photo capture is not supported in movie mode.
                 let livePhotoMovieFileName = NSUUID().uuidString
                 let livePhotoMovieFilePath = (NSTemporaryDirectory() as NSString).appendingPathComponent((livePhotoMovieFileName as NSString).appendingPathExtension("mov")!)
                 photoSettings.livePhotoMovieFileURL = URL(fileURLWithPath: livePhotoMovieFilePath)
             }
-          */
+          
             // Use a separate object for the photo capture delegate to isolate each capture life cycle.
             let photoCaptureDelegate = PhotoCaptureDelegate(with: photoSettings, willCapturePhotoAnimation: {
                 DispatchQueue.main.async { [unowned self] in
@@ -465,10 +481,10 @@ class SimpleCameraVC: UIViewController, UIImagePickerControllerDelegate, UINavig
                     let inProgressLivePhotoCapturesCount = self.inProgressLivePhotoCapturesCount
                     DispatchQueue.main.async { [unowned self] in
                         if inProgressLivePhotoCapturesCount > 0 {
-               //             self.capturingLivePhotoLabel.isHidden = false
+                            self.capturingLivePhotoLabel.isHidden = false
                         }
                         else if inProgressLivePhotoCapturesCount == 0 {
-               //             self.capturingLivePhotoLabel.isHidden = true
+                            self.capturingLivePhotoLabel.isHidden = true
                         }
                         else {
                             print("Error: In progress live photo capture count is less than 0");
@@ -488,58 +504,61 @@ class SimpleCameraVC: UIViewController, UIImagePickerControllerDelegate, UINavig
 
     }
     
+// MARK: Live Photo
+    @IBAction func toggleLivePhoto(_ livePhotoModeButton: UIButton) {
+        sessionQueue.async { [unowned self] in
+            self.livePhotoMode = (self.livePhotoMode == .on) ? .off : .on
+            let livePhotoMode = self.livePhotoMode
+            
+            DispatchQueue.main.async { [unowned self] in
+                if livePhotoMode == .on {
+                    self.livePhotoModeButton.setTitle(NSLocalizedString("Live Photo Mode: On", comment: "Live photo mode button on title"), for: [])
+                }
+                else {
+                    self.livePhotoModeButton.setTitle(NSLocalizedString("Live Photo Mode: Off", comment: "Live photo mode button off title"), for: [])
+                }
+            }
+        }
+    }
+ 
+// MARK: Tap Gesture
+    @IBAction func focusAndExposeTap(_ gestureRecognizer: UITapGestureRecognizer) {
+        let devicePoint = self.preView.videoPreviewLayer.captureDevicePointOfInterest(for: gestureRecognizer.location(in: gestureRecognizer.view))
+        focus(with: .autoFocus, exposureMode: .autoExpose, at: devicePoint, monitorSubjectAreaChange: true)
+    }
+    
+    private func focus(with focusMode: AVCaptureFocusMode, exposureMode: AVCaptureExposureMode, at devicePoint: CGPoint, monitorSubjectAreaChange: Bool) {
+        sessionQueue.async { [unowned self] in
+            if let device = self.videoDeviceSInput.device {
+                do {
+                    try device.lockForConfiguration()
+                    
+                    if device.isFocusPointOfInterestSupported && device.isFocusModeSupported(focusMode) {
+                        device.focusPointOfInterest = devicePoint
+                        device.focusMode = focusMode
+                    }
+                    
+                    if device.isExposurePointOfInterestSupported && device.isExposureModeSupported(exposureMode) {
+                        device.exposurePointOfInterest = devicePoint
+                        device.exposureMode = exposureMode
+                    }
+                    
+                    device.isSubjectAreaChangeMonitoringEnabled = monitorSubjectAreaChange
+                    device.unlockForConfiguration()
+                }
+                catch {
+                    print("Could not lock device for configuration: \(error)")
+                }
+            }
+        }
+    }
+
     
 // MARK: Photo Gallery function //TO DO:
     @IBAction func selectPhoto(_ selectButton: UIButton) {
     }
     
-    
-// MARK: KVO and Notifications
-    
-    private var sessionRunningObserveContext = 0
-    
-    private func addObservers() {
-        session.addObserver(self, forKeyPath: "running", options: .new, context: &sessionRunningObserveContext)
-        
-        NotificationCenter.default.addObserver(self, selector: #selector(subjectAreaDidChange), name: Notification.Name("AVCaptureDeviceSubjectAreaDidChangeNotification"), object: videoDeviceSInput.device)
-        NotificationCenter.default.addObserver(self, selector: #selector(sessionRuntimeError), name: Notification.Name("AVCaptureSessionRuntimeErrorNotification"), object: session)
-        
-        NotificationCenter.default.addObserver(self, selector: #selector(sessionWasInterrupted), name: Notification.Name("AVCaptureSessionWasInterruptedNotification"), object: session)
-        NotificationCenter.default.addObserver(self, selector: #selector(sessionInterruptionEnded), name: Notification.Name("AVCaptureSessionInterruptionEndedNotification"), object: session)
-    }
-    
-    private func removeObservers() {
-        NotificationCenter.default.removeObserver(self)
-        
-        session.removeObserver(self, forKeyPath: "running", context: &sessionRunningObserveContext)
-    }
-    
-    override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
-        if context == &sessionRunningObserveContext {
-            let newValue = change?[.newKey] as AnyObject?
-            guard let isSessionRunning = newValue?.boolValue else { return }
-            //let isLivePhotoCaptureSupported = photoOutput.isLivePhotoCaptureSupported
-            //let isLivePhotoCaptureEnabled = photoOutput.isLivePhotoCaptureEnabled
-            
-            DispatchQueue.main.async { [unowned self] in // Only enable the ability to change camera if the device has more than one camera.
-                self.cameraButton.isEnabled = isSessionRunning && self.videoDeviceDiscoverySession.uniqueDevicePositionsCount() > 1
-                self.recordButton.isEnabled = isSessionRunning && self.movieFileOutput != nil
-                self.photoButton.isEnabled = isSessionRunning
-                self.selectButton.isEnabled = isSessionRunning
-                self.captureModeControl.isEnabled = isSessionRunning
-                //self.livePhotoModeButton.isEnabled = isSessionRunning && isLivePhotoCaptureEnabled
-                //self.livePhotoModeButton.isHidden = !(isSessionRunning && isLivePhotoCaptureSupported)
-            }
-        }
-        else {
-            super.observeValue(forKeyPath: keyPath, of: object, change: change, context: context)
-        }
-    }
-    func subjectAreaDidChange(notification: NSNotification) {
-        let devicePoint = CGPoint(x: 0.5, y: 0.5)
-        focus(with: .autoFocus, exposureMode: .continuousAutoExposure, at: devicePoint, monitorSubjectAreaChange: false)
-    }
-    
+
 // MARK: Device Configuration. Call this on the session queue.
     private func configureSession() {
         if setupResult != .success {
@@ -623,7 +642,7 @@ class SimpleCameraVC: UIViewController, UIImagePickerControllerDelegate, UINavig
             
             photoOutput.isHighResolutionCaptureEnabled = true
             photoOutput.isLivePhotoCaptureEnabled = photoOutput.isLivePhotoCaptureSupported
-            //livePhotoMode = photoOutput.isLivePhotoCaptureSupported ? .on : .off
+            livePhotoMode = photoOutput.isLivePhotoCaptureSupported ? .on : .off
         }
         else {
             print("Could not add photo output to the session")
@@ -635,34 +654,54 @@ class SimpleCameraVC: UIViewController, UIImagePickerControllerDelegate, UINavig
         session.commitConfiguration()
     }
     
-    // MARK: Focus
-    private func focus(with focusMode: AVCaptureFocusMode, exposureMode: AVCaptureExposureMode, at devicePoint: CGPoint, monitorSubjectAreaChange: Bool) {
-        sessionQueue.async { [unowned self] in
-            if let device = self.videoDeviceSInput.device {
-                do {
-                    try device.lockForConfiguration()
-                    
-                    if device.isFocusPointOfInterestSupported && device.isFocusModeSupported(focusMode) {
-                        device.focusPointOfInterest = devicePoint
-                        device.focusMode = focusMode
-                    }
-                    
-                    if device.isExposurePointOfInterestSupported && device.isExposureModeSupported(exposureMode) {
-                        device.exposurePointOfInterest = devicePoint
-                        device.exposureMode = exposureMode
-                    }
-                    
-                    device.isSubjectAreaChangeMonitoringEnabled = monitorSubjectAreaChange
-                    device.unlockForConfiguration()
-                }
-                catch {
-                    print("Could not lock device for configuration: \(error)")
-                }
+    
+// MARK: KVO and Notifications
+    //Observer:
+    private var sessionRunningObserveContext = 0
+
+    private func addObservers() {
+        session.addObserver(self, forKeyPath: "running", options: .new, context: &sessionRunningObserveContext)
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(subjectAreaDidChange), name: Notification.Name("AVCaptureDeviceSubjectAreaDidChangeNotification"), object: videoDeviceSInput.device)
+        NotificationCenter.default.addObserver(self, selector: #selector(sessionRuntimeError), name: Notification.Name("AVCaptureSessionRuntimeErrorNotification"), object: session)
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(sessionWasInterrupted), name: Notification.Name("AVCaptureSessionWasInterruptedNotification"), object: session)
+        NotificationCenter.default.addObserver(self, selector: #selector(sessionInterruptionEnded), name: Notification.Name("AVCaptureSessionInterruptionEndedNotification"), object: session)
+    }
+    
+    private func removeObservers() {
+        NotificationCenter.default.removeObserver(self)
+        
+        session.removeObserver(self, forKeyPath: "running", context: &sessionRunningObserveContext)
+    }
+    
+    override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
+        if context == &sessionRunningObserveContext {
+            let newValue = change?[.newKey] as AnyObject?
+            guard let isSessionRunning = newValue?.boolValue else { return }
+            let isLivePhotoCaptureSupported = photoOutput.isLivePhotoCaptureSupported
+            let isLivePhotoCaptureEnabled = photoOutput.isLivePhotoCaptureEnabled
+            
+            DispatchQueue.main.async { [unowned self] in // Only enable the ability to change camera if the device has more than one camera.
+                self.cameraButton.isEnabled = isSessionRunning && self.videoDeviceDiscoverySession.uniqueDevicePositionsCount() > 1
+                self.recordButton.isEnabled = isSessionRunning && self.movieFileOutput != nil
+                self.photoButton.isEnabled = isSessionRunning
+                self.selectButton.isEnabled = isSessionRunning
+                self.captureModeControl.isEnabled = isSessionRunning
+                self.livePhotoModeButton.isEnabled = isSessionRunning && isLivePhotoCaptureEnabled
+                self.livePhotoModeButton.isHidden = !(isSessionRunning && isLivePhotoCaptureSupported)
             }
         }
+        else {
+            super.observeValue(forKeyPath: keyPath, of: object, change: change, context: context)
+        }
     }
-
-// MARK: Handle errors:
+    func subjectAreaDidChange(notification: NSNotification) {
+        let devicePoint = CGPoint(x: 0.5, y: 0.5)
+        focus(with: .autoFocus, exposureMode: .continuousAutoExposure, at: devicePoint, monitorSubjectAreaChange: false)
+    }
+    
+    //handle errors + notification:
     func sessionRuntimeError(notification: NSNotification) {
         guard let errorValue = notification.userInfo?[AVCaptureSessionErrorKey] as? NSError else {
             return

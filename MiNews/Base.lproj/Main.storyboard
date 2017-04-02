@@ -312,17 +312,23 @@
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="TTN-sA-ocs" customClass="PreviewView" customModule="MiNews" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aUf-N2-bz1">
+                                        <rect key="frame" x="231" y="17" width="136" height="36"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <state key="normal" title="Switch Camera"/>
+                                        <connections>
+                                            <action selector="switchCamera:" destination="3xm-nO-KhW" eventType="touchUpInside" id="kwa-sI-BOu"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            </view>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aUf-N2-bz1">
-                                <rect key="frame" x="120" y="567" width="136" height="36"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <state key="normal" title="Switch Camera"/>
+                                <gestureRecognizers/>
                                 <connections>
-                                    <action selector="switchCamera:" destination="3xm-nO-KhW" eventType="touchUpInside" id="kwa-sI-BOu"/>
+                                    <outletCollection property="gestureRecognizers" destination="lU7-hO-Zti" appends="YES" id="FUD-oe-2bf"/>
                                 </connections>
-                            </button>
+                            </view>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="09P-ye-wJH">
                                 <rect key="frame" x="123" y="605" width="128" height="36"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -333,7 +339,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ak1-lw-88w">
-                                <rect key="frame" x="154" y="526" width="67" height="36"/>
+                                <rect key="frame" x="281" y="605" width="67" height="36"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="Record"/>
@@ -352,7 +358,7 @@
                                 </connections>
                             </button>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="hk7-WI-iy7">
-                                <rect key="frame" x="14" y="587" width="101" height="29"/>
+                                <rect key="frame" x="14" y="609" width="101" height="29"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <segments>
                                     <segment title="Photo"/>
@@ -363,7 +369,7 @@
                                 </connections>
                             </segmentedControl>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rh7-bU-PMx">
-                                <rect key="frame" x="124" y="488" width="128" height="30"/>
+                                <rect key="frame" x="0.0" y="19" width="128" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="Select Photo"/>
@@ -371,12 +377,33 @@
                                     <action selector="selectPhoto:" destination="3xm-nO-KhW" eventType="touchUpInside" id="gST-IV-rQ5"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fbc-Tq-iKS">
+                                <rect key="frame" x="95" y="45" width="184" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <state key="normal" title="Live Photo Mode : On">
+                                    <color key="titleColor" red="0.4823529412" green="0.68627450980000004" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="toggleLivePhoto:" destination="3xm-nO-KhW" eventType="touchUpInside" id="9B5-sf-zs6"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Live" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a5v-wI-kHK">
+                                <rect key="frame" x="166" y="11" width="42" height="46"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <color key="textColor" red="0.4823529412" green="0.68627450980000004" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <connections>
                         <outlet property="cameraButton" destination="aUf-N2-bz1" id="XEv-ab-68I"/>
                         <outlet property="captureModeControl" destination="hk7-WI-iy7" id="1hf-JF-CgL"/>
+                        <outlet property="capturingLiveModeLabel" destination="a5v-wI-kHK" id="ArQ-BO-5T9"/>
+                        <outlet property="capturingLivePhotoLabel" destination="a5v-wI-kHK" id="5Zy-lc-Imn"/>
+                        <outlet property="livePhotoModeButton" destination="fbc-Tq-iKS" id="hBc-GQ-KtW"/>
                         <outlet property="photoButton" destination="09P-ye-wJH" id="Lzu-Kh-6Lk"/>
                         <outlet property="preView" destination="TTN-sA-ocs" id="xv4-mK-PVy"/>
                         <outlet property="recordButton" destination="ak1-lw-88w" id="UCU-M7-feL"/>
@@ -385,8 +412,44 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2dF-H2-9h2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="lU7-hO-Zti">
+                    <connections>
+                        <action selector="focusAndExposeTap:" destination="3xm-nO-KhW" id="bT7-dC-QgH"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="1060" y="-284.70764617691157"/>
+        </scene>
+        <!--StatementVC-->
+        <scene sceneID="6C6-AV-a7S">
+            <objects>
+                <viewController storyboardIdentifier="statement" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Hb2-WV-r5e" customClass="StatementVC" customModule="MiNews" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ZSi-ux-zEQ"/>
+                        <viewControllerLayoutGuide type="bottom" id="ZPf-hh-YAj"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="9Uh-cT-u1C">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aGu-Kf-2Dy">
+                                <rect key="frame" x="67" y="77" width="240" height="195"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tjK-su-Rib">
+                                <rect key="frame" x="67" y="332" width="240" height="283"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3sw-FS-1jC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1773.5999999999999" y="-285.60719640179911"/>
         </scene>
         <!--Storyboard Reference-->
         <scene sceneID="4M1-ar-Zyb">
