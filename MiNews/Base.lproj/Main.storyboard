@@ -309,38 +309,84 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ICH-Zz-l9u">
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="TTN-sA-ocs" customClass="PreviewView" customModule="MiNews" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aUf-N2-bz1">
-                                <rect key="frame" x="121" y="570" width="133" height="30"/>
+                                <rect key="frame" x="120" y="567" width="136" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Switch Camera"/>
+                                <connections>
+                                    <action selector="switchCamera:" destination="3xm-nO-KhW" eventType="touchUpInside" id="kwa-sI-BOu"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="09P-ye-wJH">
+                                <rect key="frame" x="123" y="605" width="128" height="36"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="Take Photo"/>
                                 <connections>
-                                    <action selector="takePhoto:" destination="3xm-nO-KhW" eventType="touchUpInside" id="zNe-JR-022"/>
+                                    <action selector="capturePhoto:" destination="3xm-nO-KhW" eventType="touchUpInside" id="9Hz-kG-JTE"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="09P-ye-wJH">
-                                <rect key="frame" x="123" y="608" width="128" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ak1-lw-88w">
+                                <rect key="frame" x="154" y="526" width="67" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Record"/>
+                                <connections>
+                                    <action selector="record:" destination="3xm-nO-KhW" eventType="touchUpInside" id="bv0-vJ-BMJ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xFv-GZ-DVy">
+                                <rect key="frame" x="126" y="318" width="123" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Resume">
+                                    <color key="titleColor" red="0.4823529412" green="0.68627450980000004" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="resumeInterruptedSession:" destination="3xm-nO-KhW" eventType="touchUpInside" id="i5E-nK-89b"/>
+                                </connections>
+                            </button>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="hk7-WI-iy7">
+                                <rect key="frame" x="14" y="587" width="101" height="29"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <segments>
+                                    <segment title="Photo"/>
+                                    <segment title="Video"/>
+                                </segments>
+                                <connections>
+                                    <action selector="toggleCaptureMode:" destination="3xm-nO-KhW" eventType="valueChanged" id="vit-8t-Bmg"/>
+                                </connections>
+                            </segmentedControl>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rh7-bU-PMx">
+                                <rect key="frame" x="124" y="488" width="128" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="Select Photo"/>
                                 <connections>
-                                    <action selector="selectPhoto:" destination="3xm-nO-KhW" eventType="touchUpInside" id="dHn-mj-uvJ"/>
+                                    <action selector="selectPhoto:" destination="3xm-nO-KhW" eventType="touchUpInside" id="gST-IV-rQ5"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <connections>
-                        <outlet property="imageView" destination="ICH-Zz-l9u" id="d0o-Yk-frZ"/>
+                        <outlet property="cameraButton" destination="aUf-N2-bz1" id="XEv-ab-68I"/>
+                        <outlet property="captureModeControl" destination="hk7-WI-iy7" id="1hf-JF-CgL"/>
+                        <outlet property="photoButton" destination="09P-ye-wJH" id="Lzu-Kh-6Lk"/>
+                        <outlet property="preView" destination="TTN-sA-ocs" id="xv4-mK-PVy"/>
+                        <outlet property="recordButton" destination="ak1-lw-88w" id="UCU-M7-feL"/>
+                        <outlet property="resumeButton" destination="xFv-GZ-DVy" id="sAO-fB-5Se"/>
+                        <outlet property="selectButton" destination="Rh7-bU-PMx" id="VJs-Zn-VBa"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2dF-H2-9h2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1061.5999999999999" y="-283.80809595202402"/>
+            <point key="canvasLocation" x="1060" y="-284.70764617691157"/>
         </scene>
         <!--Storyboard Reference-->
         <scene sceneID="4M1-ar-Zyb">
