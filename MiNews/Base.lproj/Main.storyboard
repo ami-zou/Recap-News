@@ -312,17 +312,6 @@
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="TTN-sA-ocs" customClass="PreviewView" customModule="MiNews" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aUf-N2-bz1">
-                                        <rect key="frame" x="231" y="17" width="136" height="36"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                        <state key="normal" title="Switch Camera"/>
-                                        <connections>
-                                            <action selector="switchCamera:" destination="3xm-nO-KhW" eventType="touchUpInside" id="kwa-sI-BOu"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <gestureRecognizers/>
                                 <connections>
@@ -395,13 +384,29 @@
                                 <color key="textColor" red="0.4823529412" green="0.68627450980000004" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aUf-N2-bz1">
+                                <rect key="frame" x="231" y="16" width="136" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Switch Camera"/>
+                                <connections>
+                                    <action selector="switchCamera:" destination="3xm-nO-KhW" eventType="touchUpInside" id="kwa-sI-BOu"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Camera Unavailable " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="09B-2e-Rai">
+                                <rect key="frame" x="106" y="323" width="214" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <connections>
                         <outlet property="cameraButton" destination="aUf-N2-bz1" id="XEv-ab-68I"/>
+                        <outlet property="cameraUnavailableLabel" destination="09B-2e-Rai" id="24X-DA-Czh"/>
                         <outlet property="captureModeControl" destination="hk7-WI-iy7" id="1hf-JF-CgL"/>
-                        <outlet property="capturingLiveModeLabel" destination="a5v-wI-kHK" id="ArQ-BO-5T9"/>
                         <outlet property="capturingLivePhotoLabel" destination="a5v-wI-kHK" id="5Zy-lc-Imn"/>
                         <outlet property="livePhotoModeButton" destination="fbc-Tq-iKS" id="hBc-GQ-KtW"/>
                         <outlet property="photoButton" destination="09P-ye-wJH" id="Lzu-Kh-6Lk"/>
@@ -432,13 +437,23 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aGu-Kf-2Dy">
-                                <rect key="frame" x="67" y="77" width="240" height="195"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tjK-su-Rib">
+                                <rect key="frame" x="16" y="20" width="343" height="627"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tjK-su-Rib">
-                                <rect key="frame" x="67" y="332" width="240" height="283"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <mutableString key="text">MiNews is a co-creation local news App. Users can take photos and videos within the app and upload them directly to local news company.
+Page 1: sorted news according to users’ preferences. Search bar on top where user can search the hottest topics.
+Page 2: camera/video taking page. User can take photos, videos, and live photos, and select photos from album.
+Page 3: upload page where user can add title, hashtag, and description of the materials they wanted to upload.
+
+Statement: as of April 2, 4pm PDT, I’ve finished most codes of page 2 based on Apple’s open source simple camera app (see original code in CameraViewController). TO DO: 1. finish live photo code, 2. add link to gallery code, 3. add icons for buttons
+
+Page 1: TO DO: 1. create a table view controller to display search results. 2. Customize user profiles. 3. back end code for sorting news
+
+Page 3: add features
+
+I haven’t formally learned Xcode nor Swift. This is a side project which I started a week ago. I read and watch a lot of tutorials and references, and learn from answers in StackOverflow.
+
+See the latest version of MiNews at my GitHub: amigomushroom</mutableString>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>

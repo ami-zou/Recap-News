@@ -17,6 +17,7 @@ class SimpleCameraVC: UIViewController, UIImagePickerControllerDelegate, UINavig
     @IBOutlet weak var resumeButton: UIButton! //--> resumeInterruptedSession()
     @IBOutlet weak var selectButton: UIButton! //--> selectPhoto() //TO DO: link to Photo Gallery
     @IBOutlet weak var cameraButton: UIButton! //--> switchCamera() :use to switch front and back camera
+    @IBOutlet weak var cameraUnavailableLabel: UILabel!
     
     //videos:
     @IBOutlet weak var recordButton: UIButton! //--> record()
@@ -32,7 +33,7 @@ class SimpleCameraVC: UIViewController, UIImagePickerControllerDelegate, UINavig
         case movie = 1
     }
     
-   /*TO DO: Live Photo
+   //TO DO: Live Photo
     @IBOutlet weak var livePhotoModeButton: UIButton! //--> toggleLivePhotoMode()
     @IBOutlet weak var capturingLivePhotoLabel: UILabel!
     private enum LivePhotoMode {
@@ -40,7 +41,7 @@ class SimpleCameraVC: UIViewController, UIImagePickerControllerDelegate, UINavig
         case off
     }
     private var livePhotoMode: LivePhotoMode = .off
-   */
+   
     
     private let photoOutput = AVCapturePhotoOutput()
     private var inProgressPhotoCaptureDelegates = [Int64 : PhotoCaptureDelegate]()
@@ -205,16 +206,16 @@ class SimpleCameraVC: UIViewController, UIImagePickerControllerDelegate, UINavig
                 
                 self.movieFileOutput = nil
             
-             
+          /*
                 if self.photoOutput.isLivePhotoCaptureSupported {
                     self.photoOutput.isLivePhotoCaptureEnabled = true
                     
                     DispatchQueue.main.async {
-                        self.livePhotoModeButton.isEnabled = true
-                        self.livePhotoModeButton.isHidden = false
+                        //self.livePhotoModeButton.isEnabled = true
+                        //self.livePhotoModeButton.isHidden = false
                     }
                 }
-            
+          */
             }
         }
         else if captureModeControl.selectedSegmentIndex == CaptureMode.movie.rawValue
@@ -454,13 +455,13 @@ class SimpleCameraVC: UIViewController, UIImagePickerControllerDelegate, UINavig
             if photoSettings.availablePreviewPhotoPixelFormatTypes.count > 0 {
                 photoSettings.previewPhotoFormat = [kCVPixelBufferPixelFormatTypeKey as String : photoSettings.availablePreviewPhotoPixelFormatTypes.first!]
             }
-          
+      
             if self.livePhotoMode == .on && self.photoOutput.isLivePhotoCaptureSupported { // Live Photo capture is not supported in movie mode.
                 let livePhotoMovieFileName = NSUUID().uuidString
                 let livePhotoMovieFilePath = (NSTemporaryDirectory() as NSString).appendingPathComponent((livePhotoMovieFileName as NSString).appendingPathExtension("mov")!)
                 photoSettings.livePhotoMovieFileURL = URL(fileURLWithPath: livePhotoMovieFilePath)
             }
-          
+      
             // Use a separate object for the photo capture delegate to isolate each capture life cycle.
             let photoCaptureDelegate = PhotoCaptureDelegate(with: photoSettings, willCapturePhotoAnimation: {
                 DispatchQueue.main.async { [unowned self] in
@@ -477,6 +478,7 @@ class SimpleCameraVC: UIViewController, UIImagePickerControllerDelegate, UINavig
                     else {
                         self.inProgressLivePhotoCapturesCount -= 1
                     }
+                    
                     
                     let inProgressLivePhotoCapturesCount = self.inProgressLivePhotoCapturesCount
                     DispatchQueue.main.async { [unowned self] in
@@ -519,7 +521,10 @@ class SimpleCameraVC: UIViewController, UIImagePickerControllerDelegate, UINavig
                 }
             }
         }
+ 
     }
+
+ 
  
 // MARK: Tap Gesture
     @IBAction func focusAndExposeTap(_ gestureRecognizer: UITapGestureRecognizer) {
@@ -739,14 +744,12 @@ class SimpleCameraVC: UIViewController, UIImagePickerControllerDelegate, UINavig
             }
             else if reason == AVCaptureSessionInterruptionReason.videoDeviceNotAvailableWithMultipleForegroundApps {
                 // Simply fade-in a label to inform the user that the camera is unavailable.
-          /*
                 cameraUnavailableLabel.alpha = 0
                 cameraUnavailableLabel.isHidden = false
                 
                 UIView.animate(withDuration: 0.25) { [unowned self] in
                     self.cameraUnavailableLabel.alpha = 1
                 }
-        */
             }
             
             if showResumeButton {
@@ -772,7 +775,7 @@ class SimpleCameraVC: UIViewController, UIImagePickerControllerDelegate, UINavig
                 }
             )
         }
-    /*
+    
         if !cameraUnavailableLabel.isHidden {
             UIView.animate(withDuration: 0.25,
                            animations: { [unowned self] in
@@ -782,7 +785,7 @@ class SimpleCameraVC: UIViewController, UIImagePickerControllerDelegate, UINavig
                 }
             )
         }
-    */
+    
     }
    
 }
