@@ -172,131 +172,6 @@
             </objects>
             <point key="canvasLocation" x="1788" y="444"/>
         </scene>
-        <!--Camera View Controller-->
-        <scene sceneID="D5H-dX-qt5">
-            <objects>
-                <viewController restorationIdentifier="CameraViewController" storyboardIdentifier="CameraViewController" title="Camera View Controller" id="bU9-Sl-V4a" customClass="CameraViewController" customModule="MiNews" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="tFG-u1-SA9"/>
-                        <viewControllerLayoutGuide type="bottom" id="uNm-Vg-de9"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="uSg-Rk-VQo">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="shp-ws-hVN" customClass="PreviewView" customModule="MiNews" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
-                                <gestureRecognizers/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="375" id="RBG-SL-acw"/>
-                                    <constraint firstAttribute="height" constant="667" id="bni-ql-NGY"/>
-                                </constraints>
-                                <connections>
-                                    <outletCollection property="gestureRecognizers" destination="oJD-bK-5TK" appends="YES" id="nI1-zd-Ri9"/>
-                                </connections>
-                            </view>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Ix6-3d-S07">
-                                <rect key="frame" x="16" y="590" width="101" height="29"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <segments>
-                                    <segment title="Photo"/>
-                                    <segment title="Video"/>
-                                </segments>
-                                <color key="tintColor" red="1" green="0.43903888499999999" blue="0.53620619189999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <connections>
-                                    <action selector="toggleCaptureMode:" destination="bU9-Sl-V4a" eventType="valueChanged" id="q08-zj-lrb"/>
-                                </connections>
-                            </segmentedControl>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d9F-VL-pjx">
-                                <rect key="frame" x="136" y="518" width="71" height="65"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Camera">
-                                    <color key="titleColor" red="1" green="0.43903888499999999" blue="0.53620619189999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="changeCamera:" destination="bU9-Sl-V4a" eventType="touchUpInside" id="0of-QG-8Qc"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P03-Sj-LD3">
-                                <rect key="frame" x="23" y="535" width="49" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Record">
-                                    <color key="titleColor" red="1" green="0.43903888499999999" blue="0.53620619189999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="toggleMovieRecording:" destination="bU9-Sl-V4a" eventType="touchUpInside" id="gcG-lG-Rkh"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C79-w5-ajC">
-                                <rect key="frame" x="144" y="293" width="55" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Resume">
-                                    <color key="titleColor" red="0.34394531249999999" green="0.14202008930000001" blue="0.9379743304" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="resumeInterruptedSession:" destination="bU9-Sl-V4a" eventType="touchUpInside" id="mJ3-dp-MHY"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3bF-iE-hb8">
-                                <rect key="frame" x="291" y="535" width="41" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Photo">
-                                    <color key="titleColor" red="1" green="0.43903888499999999" blue="0.53620619189999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="capturePhoto:" destination="bU9-Sl-V4a" eventType="touchUpInside" id="fI4-Lo-QEs"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Camera Unavailable " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="004-24-Ndp">
-                                <rect key="frame" x="101" y="227" width="152" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U8x-wd-o3O">
-                                <rect key="frame" x="98" y="11" width="147" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Live Photo Mode: On "/>
-                                <connections>
-                                    <action selector="toggleLivePhotoMode:" destination="bU9-Sl-V4a" eventType="touchUpInside" id="hCC-sU-1K9"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Live" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yEj-BW-J7v">
-                                <rect key="frame" x="156" y="49" width="31" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                        <constraints>
-                            <constraint firstItem="shp-ws-hVN" firstAttribute="leading" secondItem="uSg-Rk-VQo" secondAttribute="leading" id="9H2-jF-pnT"/>
-                            <constraint firstItem="shp-ws-hVN" firstAttribute="bottom" secondItem="uNm-Vg-de9" secondAttribute="top" id="b3F-ON-NAP"/>
-                        </constraints>
-                    </view>
-                    <connections>
-                        <outlet property="cameraButton" destination="d9F-VL-pjx" id="6hj-TX-lRb"/>
-                        <outlet property="cameraUnavailable" destination="004-24-Ndp" id="UrG-41-qY2"/>
-                        <outlet property="captureModeControl" destination="Ix6-3d-S07" id="DQc-b3-0CX"/>
-                        <outlet property="capturingLivePhotoLabel" destination="yEj-BW-J7v" id="9j4-B4-Xd4"/>
-                        <outlet property="livePhotoModeButton" destination="U8x-wd-o3O" id="gxp-nE-pgb"/>
-                        <outlet property="photoButton" destination="3bF-iE-hb8" id="TBO-hE-CeU"/>
-                        <outlet property="previewView" destination="shp-ws-hVN" id="x5p-NV-BJz"/>
-                        <outlet property="recordButton" destination="P03-Sj-LD3" id="stc-EK-CVz"/>
-                        <outlet property="resumeButton" destination="C79-w5-ajC" id="aQN-C0-kfk"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="egz-p7-lXL" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <tapGestureRecognizer id="oJD-bK-5TK">
-                    <connections>
-                        <action selector="focusAndExposeTap:" destination="bU9-Sl-V4a" id="tpn-6F-wDw"/>
-                    </connections>
-                </tapGestureRecognizer>
-            </objects>
-            <point key="canvasLocation" x="368.80000000000001" y="-283.80809595202402"/>
-        </scene>
         <!--SimpleCameraVC-->
         <scene sceneID="RKN-3V-FmA">
             <objects>
@@ -403,6 +278,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <navigationItem key="navigationItem" id="ILN-Kc-baR"/>
                     <connections>
                         <outlet property="cameraButton" destination="aUf-N2-bz1" id="XEv-ab-68I"/>
                         <outlet property="cameraUnavailableLabel" destination="09B-2e-Rai" id="24X-DA-Czh"/>
@@ -423,7 +299,7 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="1060" y="-284.70764617691157"/>
+            <point key="canvasLocation" x="2247.1999999999998" y="-286.50674662668666"/>
         </scene>
         <!--StatementVC-->
         <scene sceneID="6C6-AV-a7S">
@@ -464,7 +340,7 @@ See the latest version of MiNews at my GitHub: amigomushroom</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3sw-FS-1jC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1773.5999999999999" y="-285.60719640179911"/>
+            <point key="canvasLocation" x="3652" y="-285.60719640179911"/>
         </scene>
         <!--Storyboard Reference-->
         <scene sceneID="4M1-ar-Zyb">
@@ -472,6 +348,24 @@ See the latest version of MiNews at my GitHub: amigomushroom</string>
                 <viewControllerPlaceholder id="i5S-UA-7q5" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WmD-UQ-MSw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="nbK-0q-x3k">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="z7e-7q-ltd" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="FyH-Em-J8x">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="3xm-nO-KhW" kind="relationship" relationship="rootViewController" id="Jsi-Os-HTj"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PEG-Ia-A5M" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1308" y="-286.50674662668666"/>
         </scene>
     </scenes>
     <color key="tintColor" red="1" green="0.43903888499999999" blue="0.53620619189999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

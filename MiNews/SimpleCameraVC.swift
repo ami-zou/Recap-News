@@ -11,7 +11,7 @@ import AVFoundation
 import UIKit
 import Photos
 
-class SimpleCameraVC: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, AVCaptureFileOutputRecordingDelegate {
+class SimpleCameraVC: UIViewController, UIImagePickerControllerDelegate, AVCaptureFileOutputRecordingDelegate, UINavigationControllerDelegate {
 //UI Setup:
     @IBOutlet weak var preView: PreviewView!
     @IBOutlet weak var resumeButton: UIButton! //--> resumeInterruptedSession()
@@ -561,6 +561,14 @@ class SimpleCameraVC: UIViewController, UIImagePickerControllerDelegate, UINavig
     
 // MARK: Photo Gallery function //TO DO:
     @IBAction func selectPhoto(_ selectButton: UIButton) {
+        if UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.photoLibrary){
+            let imagePicker = UIImagePickerController()
+            imagePicker.delegate = self as! UIImagePickerControllerDelegate & UINavigationControllerDelegate
+            imagePicker.sourceType = UIImagePickerControllerSourceType.photoLibrary; //don't forget ";"
+            imagePicker.allowsEditing = true //can edit
+            self.present(imagePicker, animated: true, completion: nil)
+        }
+
     }
     
 
