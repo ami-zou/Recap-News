@@ -10,14 +10,11 @@ import UIKit
 
 class PageVC: UIPageViewController, UIPageViewControllerDataSource, UIPageViewControllerDelegate {
     lazy var VCArr : [UIViewController] = { //lazy: initiated when called   //put "=" to initialize /compute property
-        return [self.VCInstance(name: "statement"),
-                self.VCInstance(name: "FirstNewsVC"),
-                //self.VCInstance(name: "SecondCameraVC"),
-                //self.VCInstance(name: "CameraViewController"), --- example from Apple's Website
-                self.VCInstance(name: "SimpleCameraVC"),
+        return [//self.VCInstance(name: "logoPage"),
+              //  self.VCInstance(name: "statement"),
+                self.VCInstance(name: "ArticleVC"),
+               // self.VCInstance(name: "SimpleCameraVC"),
                 self.VCInstance(name: "ThirdReportVC")]
-                //self.VCInstance(name: "MiNewsCameraVC"),
-                //self.VCInstance(name: "MiNews")]
     }()
     
     private func VCInstance(name: String) -> UIViewController{
