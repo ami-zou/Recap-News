@@ -13,6 +13,32 @@ import Photos
 
 class SimpleCameraVC: UIViewController, UIImagePickerControllerDelegate, AVCaptureFileOutputRecordingDelegate, UINavigationControllerDelegate {
 //UI Setup:
+    
+   /*
+    @IBOutlet weak var pickedImage: UIImageView!
+    
+    @IBOutlet weak var saveButton: UIButton!
+    
+    @IBAction func save(_ saveButton: UIButton) {
+        let imageData = UIImageJPEGRepresentation(pickedImage.image!, 0.6)
+        let compressedJEPGImage = UIImage(data: imageData!)
+        UIImageWriteToSavedPhotosAlbum(compressedJEPGImage!, nil, nil, nil)
+        saveNotice()
+    }
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingImage image: UIImage!, edittingInfo : [NSObject : AnyObject]!) { //remember to unwrap ("!") it
+        pickedImage.image = image
+        self.dismiss(animated: true, completion: nil); //put ";" here
+    }
+
+    func saveNotice(){
+        let alertController = UIAlertController(title: "Image Saved!", message: "Your picture was successfully saved!", preferredStyle: .alert)
+        let defaultAction = UIAlertAction(title: "Ok", style: .default, handler: nil)
+        alertController.addAction(defaultAction)
+        present(alertController, animated: true, completion: nil)
+    }
+
+    */
     @IBOutlet weak var preView: PreviewView!
     @IBOutlet weak var resumeButton: UIButton! //--> resumeInterruptedSession()
     @IBOutlet weak var selectButton: UIButton! //--> selectPhoto() //TO DO: link to Photo Gallery
@@ -74,6 +100,8 @@ class SimpleCameraVC: UIViewController, UIImagePickerControllerDelegate, AVCaptu
         
         captureModeControl.isEnabled = false
         preView.session = session;
+        
+        //saveButton.isHidden = true
         
         switch AVCaptureDevice.authorizationStatus(forMediaType: AVMediaTypeVideo) {
         case .authorized:

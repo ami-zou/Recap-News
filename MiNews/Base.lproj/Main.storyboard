@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="DVg-os-kXc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="DVg-os-kXc">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -175,6 +175,12 @@
         <!--SimpleCameraVC-->
         <scene sceneID="RKN-3V-FmA">
             <objects>
+                <tapGestureRecognizer id="lU7-hO-Zti">
+                    <connections>
+                        <action selector="focusAndExposeTap:" destination="3xm-nO-KhW" id="bT7-dC-QgH"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2dF-H2-9h2" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController storyboardIdentifier="SimpleCameraVC" title="SimpleCameraVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="3xm-nO-KhW" customClass="SimpleCameraVC" customModule="MiNews" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="CsM-kp-pQw"/>
@@ -292,14 +298,45 @@
                         <outlet property="selectButton" destination="Rh7-bU-PMx" id="VJs-Zn-VBa"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="2dF-H2-9h2" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <tapGestureRecognizer id="lU7-hO-Zti">
-                    <connections>
-                        <action selector="focusAndExposeTap:" destination="3xm-nO-KhW" id="bT7-dC-QgH"/>
-                    </connections>
-                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="2247.1999999999998" y="-286.50674662668666"/>
+        </scene>
+        <!--Simple CameraVC-->
+        <scene sceneID="vW4-r2-9GS">
+            <objects>
+                <viewController id="HoO-ae-Gji" customClass="SimpleCameraVC" customModule="MiNews" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="gNc-Dr-G8G"/>
+                        <viewControllerLayoutGuide type="bottom" id="9ey-3e-1OV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Pxz-3e-lcd">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2O6-EJ-TnD">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U96-JW-Oqs">
+                                <rect key="frame" x="148" y="450" width="123" height="103"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Save"/>
+                                <connections>
+                                    <action selector="save:" destination="HoO-ae-Gji" eventType="touchUpInside" id="nTG-pj-Mk6"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="pickedImage" destination="2O6-EJ-TnD" id="qiX-f1-u5m"/>
+                        <outlet property="saveButton" destination="U96-JW-Oqs" id="EE4-a1-eMN"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gh8-Y6-HZb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2932" y="-285.60719640179911"/>
         </scene>
         <!--StatementVC-->
         <scene sceneID="6C6-AV-a7S">
