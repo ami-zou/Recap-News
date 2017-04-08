@@ -471,24 +471,6 @@ See the latest version of MiNews at my GitHub: amigomushroom</mutableString>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WmD-UQ-MSw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
         </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="nbK-0q-x3k">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="z7e-7q-ltd" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="FyH-Em-J8x">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="3xm-nO-KhW" kind="relationship" relationship="rootViewController" id="Jsi-Os-HTj"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="PEG-Ia-A5M" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1308" y="-286.50674662668666"/>
-        </scene>
     </scenes>
     <resources>
         <image name="Icon-60.png" width="16" height="16"/>
