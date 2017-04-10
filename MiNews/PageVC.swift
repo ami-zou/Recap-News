@@ -12,9 +12,9 @@ class PageVC: UIPageViewController, UIPageViewControllerDataSource, UIPageViewCo
     lazy var VCArr : [UIViewController] = { //lazy: initiated when called   //put "=" to initialize /compute property
         return [self.VCInstance(name: "logoPage"),
                 self.VCInstance(name: "statement"),
-                //self.VCInstance(name: "ArticleVC"),
+                self.VCInstance(name: "ArticleVC"),
                 self.VCInstance(name: "SimpleCameraVC"),
-                self.VCInstance(name: "ThirdReportVC")]
+                self.VCInstance(name: "ReportVC")]
     }()
     
     private func VCInstance(name: String) -> UIViewController{

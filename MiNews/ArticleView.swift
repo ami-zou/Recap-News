@@ -34,7 +34,7 @@ class ArticleView: UIViewController, UITableViewDelegate, UITableViewDataSource 
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        //fetchArticles()
+        fetchArticles()
     }
     
     func fetchArticles(){
@@ -42,7 +42,7 @@ class ArticleView: UIViewController, UITableViewDelegate, UITableViewDataSource 
         
         let task = URLSession.shared.dataTask(with: urlRequest) { (data, response, error) in
             if error != nil {
-                print(error)
+                print(error!)
                 return
             }
             
@@ -55,13 +55,14 @@ class ArticleView: UIViewController, UITableViewDelegate, UITableViewDataSource 
                     for articleFromJson in articlesFromJson{ //iterate through the list of articles
                         let article = Article()
                         if let title = articleFromJson["title"] as? String, let author = articleFromJson["author"] as? String,
-                           let desc = articleFromJson["description"] as? String, let url = articleFromJson["url"] as? String,
+                           let desc = articleFromJson["description"] as? String, let url = articleFromJson["url"] as? String, //let time = articleFromJson["publishedAt"] as? String,
                            let urlToImage = articleFromJson["urlToImage"] as? String {
                             article.headline = title
                             article.desc = desc
                             article.author = author
                             article.url = url
                             article.imageUrl = urlToImage
+                            //article.time = time
                         }
                         self.articles?.append(article)
                     }
@@ -80,9 +81,9 @@ class ArticleView: UIViewController, UITableViewDelegate, UITableViewDataSource 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "articleCell", for: indexPath) as! ArticleCell //type
         
-        //cell.title.text = self.articles?[indexPath.item].headline //remember to unwrap it first
-        //cell.desc.text = self.articles?[indexPath.item].desc
-        
+        cell.title.text = self.articles?[indexPath.item].headline //remember to unwrap it first
+        cell.desc.text = self.articles?[indexPath.item].desc
+        cell.imgView.downloadImage(from: (self.articles?[indexPath.item].imageUrl!)! ) //remember to unwrap
         
         return cell
     }
@@ -92,9 +93,26 @@ class ArticleView: UIViewController, UITableViewDelegate, UITableViewDataSource 
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        //return self.articles?.count ?? 0 //one-line if statement: or else return 0
-        return 0
+        return self.articles?.count ?? 0 //one-line if statement: or else return 0
+        //return 0
     }
-    
-    
+}
+
+extension UIImageView{
+    func downloadImage(from url: String){
+        let urlRequest = URLRequest(url: URL(string: url)! ) //put a string URL inside -- now: Google News
+        
+        let task = URLSession.shared.dataTask(with: urlRequest) { (data, response, error) in
+            if error != nil {
+                print(error!)
+                return
+            }
+            
+            DispatchQueue.main.async {
+                self.image = UIImage(data: data!) //explicitly unwrap it
+            }
+        }
+        
+        task.resume() //remember to resume
+    }
 }

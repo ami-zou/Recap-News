@@ -205,10 +205,10 @@
             </objects>
             <point key="canvasLocation" x="1061.5999999999999" y="443.92803598200902"/>
         </scene>
-        <!--ThirdReportVC-->
+        <!--ReportVC-->
         <scene sceneID="avE-U1-YxM">
             <objects>
-                <viewController restorationIdentifier="ThirdReportVC" storyboardIdentifier="ThirdReportVC" title="ThirdReportVC" id="9z3-Gk-D6q" sceneMemberID="viewController">
+                <viewController restorationIdentifier="ThirdReportVC" storyboardIdentifier="ReportVC" title="ReportVC" id="9z3-Gk-D6q" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="sMl-N1-6Gq"/>
                         <viewControllerLayoutGuide type="bottom" id="GCW-Or-6QI"/>
@@ -433,7 +433,7 @@
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="WXm-6z-ClQ">
                                 <rect key="frame" x="16" y="28" width="343" height="631"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <mutableString key="text">MiNews is a co-creation local news App. Users can take photos and videos within the app and upload them directly to local news company.
+                                <string key="text">MiNews is a co-creation local news App. Users can take photos and videos within the app and upload them directly to local news company.
 Page 1: sorted news according to users’ preferences. Search bar on top where user can search the hottest topics.
 Page 2: camera/video taking page. User can take photos, videos, and live photos, and select photos from album.
 Page 3: upload page where user can add title, hashtag, and description of the materials they wanted to upload.
@@ -446,7 +446,7 @@ Page 3: add features
 
 I haven’t formally learned Xcode nor Swift. This is a side project which I started a month ago. I read and watch a lot of tutorials and references, and learn from answers in StackOverflow.
 
-See the latest version of MiNews at my GitHub: amigomushroom</mutableString>
+See the latest version of MiNews at my GitHub: amigomushroom</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
