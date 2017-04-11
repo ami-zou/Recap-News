@@ -439,7 +439,7 @@ class SimpleCameraVC: UIViewController, UIImagePickerControllerDelegate, AVCaptu
                         creationRequest.addResource(with: .video, fileURL: outputFileURL, options: options)
                     }, completionHandler: { success, error in
                         if !success {
-                            print("Could not save movie to photo library: \(error)")
+                            print("Could not save movie to photo library: \(error!)")
                         }
                         cleanup()
                     }
@@ -591,12 +591,11 @@ class SimpleCameraVC: UIViewController, UIImagePickerControllerDelegate, AVCaptu
     @IBAction func selectPhoto(_ selectButton: UIButton) {
         if UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.photoLibrary){
             let imagePicker = UIImagePickerController()
-            imagePicker.delegate = self as! UIImagePickerControllerDelegate & UINavigationControllerDelegate
+            imagePicker.delegate = self as UIImagePickerControllerDelegate & UINavigationControllerDelegate
             imagePicker.sourceType = UIImagePickerControllerSourceType.photoLibrary; //don't forget ";"
             imagePicker.allowsEditing = true //can edit
             self.present(imagePicker, animated: true, completion: nil)
         }
-
     }
     
 

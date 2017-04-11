@@ -16,7 +16,7 @@
                 <pageViewController storyboardIdentifier="PageVC" autoresizesArchivedViewToFullSize="NO" title="PageVC" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="DVg-os-kXc" customClass="PageVC" customModule="MiNews" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3jc-z3-0S9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-606" y="444"/>
+            <point key="canvasLocation" x="-559" y="-286"/>
         </scene>
         <!--ArticleVC-->
         <scene sceneID="ROF-Xv-P4z">
@@ -133,7 +133,7 @@
                     </connections>
                 </searchDisplayController>
             </objects>
-            <point key="canvasLocation" x="364" y="457.42128935532236"/>
+            <point key="canvasLocation" x="1991" y="-287"/>
         </scene>
         <!--SecondCameraVC-->
         <scene sceneID="MJL-VU-tug">
@@ -203,7 +203,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xuC-dj-5Ob" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1061.5999999999999" y="443.92803598200902"/>
+            <point key="canvasLocation" x="1990" y="444"/>
         </scene>
         <!--ReportVC-->
         <scene sceneID="avE-U1-YxM">
@@ -221,7 +221,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pyj-gC-xQk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1788" y="444"/>
+            <point key="canvasLocation" x="1182" y="444"/>
         </scene>
         <!--Logo -->
         <scene sceneID="swf-f8-PRc">
@@ -250,7 +250,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KC1-y3-6is" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2684" y="448.42578710644682"/>
+            <point key="canvasLocation" x="322" y="-286"/>
         </scene>
         <!--SimpleCameraVC-->
         <scene sceneID="RKN-3V-FmA">
@@ -379,7 +379,7 @@
                 </tapGestureRecognizer>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2dF-H2-9h2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2247.1999999999998" y="-286.50674662668666"/>
+            <point key="canvasLocation" x="-559" y="444"/>
         </scene>
         <!--Simple CameraVC-->
         <scene sceneID="vW4-r2-9GS">
@@ -416,7 +416,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gh8-Y6-HZb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2932" y="-285.60719640179911"/>
+            <point key="canvasLocation" x="321" y="444"/>
         </scene>
         <!--StatementVC-->
         <scene sceneID="6C6-AV-a7S">
@@ -462,7 +462,7 @@ See the latest version of MiNews at my GitHub: amigomushroom</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3sw-FS-1jC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3652" y="-285.60719640179911"/>
+            <point key="canvasLocation" x="1182" y="-287"/>
         </scene>
         <!--Storyboard Reference-->
         <scene sceneID="4M1-ar-Zyb">
