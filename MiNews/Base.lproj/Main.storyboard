@@ -30,6 +30,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OnD-j0-ClD">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="20"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="0.43903888499999999" blue="0.53620619189999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MiNews" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6XE-mL-OWL">
                                 <rect key="frame" x="0.0" y="20" width="375" height="38"/>
                                 <color key="backgroundColor" red="1" green="0.43903888497079746" blue="0.53620619190552599" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -48,7 +53,7 @@
                                         <rect key="frame" x="0.0" y="28" width="375" height="247"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="bnJ-ad-CPr" id="Riu-RR-fWt">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="247"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="246.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IBC-QD-g6O">
@@ -135,6 +140,70 @@
             </objects>
             <point key="canvasLocation" x="1991" y="-287"/>
         </scene>
+        <!--Web ViewVC-->
+        <scene sceneID="5gp-cf-Ytr">
+            <objects>
+                <viewController storyboardIdentifier="WebViewVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="UTz-1G-zRf" customClass="WebViewVC" customModule="MiNews" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jVr-U6-Wad"/>
+                        <viewControllerLayoutGuide type="bottom" id="Lyf-oD-Xhi"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="IkI-k4-3Ix">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MiNews" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="83T-7B-PCU">
+                                <rect key="frame" x="0.0" y="20" width="375" height="38"/>
+                                <color key="backgroundColor" red="1" green="0.43903888499999999" blue="0.53620619189999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="38" id="FI6-fY-vFd"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DoH-8a-Rr9">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="20"/>
+                                <color key="backgroundColor" red="1" green="0.43903888499999999" blue="0.53620619189999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="C7i-6i-4Ln">
+                                <rect key="frame" x="0.0" y="57" width="375" height="610"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hxq-lz-0Sa">
+                                <rect key="frame" x="16" y="24" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="&lt;Back">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="ehs-TB-jqc" kind="show" id="qK8-in-hw0"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="DoH-8a-Rr9" secondAttribute="trailing" id="0SB-gq-Mqe"/>
+                            <constraint firstItem="C7i-6i-4Ln" firstAttribute="leading" secondItem="IkI-k4-3Ix" secondAttribute="leading" id="1dr-bR-vmW"/>
+                            <constraint firstItem="DoH-8a-Rr9" firstAttribute="top" secondItem="IkI-k4-3Ix" secondAttribute="top" id="3Pe-3S-f7x"/>
+                            <constraint firstAttribute="trailing" secondItem="C7i-6i-4Ln" secondAttribute="trailing" id="Ilp-mz-BZb"/>
+                            <constraint firstItem="Lyf-oD-Xhi" firstAttribute="top" secondItem="C7i-6i-4Ln" secondAttribute="bottom" id="M4W-u1-xZ9"/>
+                            <constraint firstItem="DoH-8a-Rr9" firstAttribute="trailing" secondItem="83T-7B-PCU" secondAttribute="trailing" id="OrV-Mp-Ovm"/>
+                            <constraint firstItem="DoH-8a-Rr9" firstAttribute="leading" secondItem="IkI-k4-3Ix" secondAttribute="leading" id="POo-Zw-hCm"/>
+                            <constraint firstItem="DoH-8a-Rr9" firstAttribute="bottom" secondItem="jVr-U6-Wad" secondAttribute="bottom" id="ThJ-k7-q2s"/>
+                            <constraint firstItem="DoH-8a-Rr9" firstAttribute="leading" secondItem="83T-7B-PCU" secondAttribute="leading" id="nfH-LB-5OK"/>
+                            <constraint firstItem="83T-7B-PCU" firstAttribute="top" secondItem="jVr-U6-Wad" secondAttribute="bottom" id="ud6-2m-5Kt"/>
+                            <constraint firstItem="C7i-6i-4Ln" firstAttribute="top" secondItem="jVr-U6-Wad" secondAttribute="bottom" constant="37" id="uea-Hh-WJ2"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="webView" destination="C7i-6i-4Ln" id="Xva-nX-0ck"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bCk-vT-dP5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2880.8000000000002" y="-287.40629685157421"/>
+        </scene>
         <!--SecondCameraVC-->
         <scene sceneID="MJL-VU-tug">
             <objects>
@@ -204,6 +273,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xuC-dj-5Ob" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1990" y="444"/>
+        </scene>
+        <!--LoadVC-->
+        <scene sceneID="nyO-dJ-VOB">
+            <objects>
+                <viewController title="LoadVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="g99-Et-Nns" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="GW7-iy-fbS"/>
+                        <viewControllerLayoutGuide type="bottom" id="Q8g-vO-2FR"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="rdP-hs-aHM">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZZ8-HT-Rtv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2881" y="444"/>
         </scene>
         <!--ReportVC-->
         <scene sceneID="avE-U1-YxM">
@@ -469,6 +556,23 @@ See the latest version of MiNews at my GitHub: amigomushroom</string>
             <objects>
                 <viewControllerPlaceholder id="i5S-UA-7q5" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WmD-UQ-MSw" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="M5J-YZ-h0i">
+            <objects>
+                <viewController id="1ao-MJ-4Hy" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="I5I-TI-EDn"/>
+                        <viewControllerLayoutGuide type="bottom" id="6r3-Zg-fve"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="XPl-9z-x0k">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qxF-ha-WIA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
         </scene>
     </scenes>

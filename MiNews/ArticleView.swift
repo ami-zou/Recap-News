@@ -34,7 +34,7 @@ class ArticleView: UIViewController, UITableViewDelegate, UITableViewDataSource 
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        fetchArticles()
+        //fetchArticles()
     }
     
     func fetchArticles(){
@@ -96,6 +96,15 @@ class ArticleView: UIViewController, UITableViewDelegate, UITableViewDataSource 
         return self.articles?.count ?? 0 //one-line if statement: or else return 0
         //return 0
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let webVC = UIStoryboard.init(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "WebViewVC") as! WebViewVC;
+        
+        webVC.url = self.articles?[indexPath.item].url
+        
+        self.present(webVC, animated: true, completion: nil)
+    }
+    
 }
 
 extension UIImageView{
