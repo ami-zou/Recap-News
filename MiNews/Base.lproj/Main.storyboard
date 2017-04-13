@@ -53,7 +53,7 @@
                                         <rect key="frame" x="0.0" y="28" width="375" height="247"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="bnJ-ad-CPr" id="Riu-RR-fWt">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="246.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="247"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IBC-QD-g6O">
@@ -277,7 +277,7 @@
         <!--LoadVC-->
         <scene sceneID="nyO-dJ-VOB">
             <objects>
-                <viewController title="LoadVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="g99-Et-Nns" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LoadVC" title="LoadVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="g99-Et-Nns" customClass="LoadVC" customModule="MiNews" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="GW7-iy-fbS"/>
                         <viewControllerLayoutGuide type="bottom" id="Q8g-vO-2FR"/>
@@ -285,7 +285,7 @@
                     <view key="view" contentMode="scaleToFill" id="rdP-hs-aHM">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.4823529412" green="0.68627450980000004" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZZ8-HT-Rtv" userLabel="First Responder" sceneMemberID="firstResponder"/>
