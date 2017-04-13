@@ -90,6 +90,12 @@ class OvalLayer: CAShapeLayer {
     }
     
     func contract() {
-        
+        let contractAnimation: CABasicAnimation = CABasicAnimation(keyPath: "path")
+        contractAnimation.fromValue = ovalPathLarge.cgPath
+        contractAnimation.toValue = ovalPathSmall.cgPath
+        contractAnimation.duration = animationDuration
+        contractAnimation.fillMode = kCAFillModeForwards
+        contractAnimation.isRemovedOnCompletion = false
+        add(contractAnimation, forKey: nil)
     }
 }
