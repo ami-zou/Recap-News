@@ -10,11 +10,12 @@
 		A11506CA1E8C6250009B3C2A /* SimpleCameraVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A11506C91E8C6250009B3C2A /* SimpleCameraVC.swift */; };
 		A11668DF1EA02FA2006D33F1 /* RectangularLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A11668DE1EA02FA2006D33F1 /* RectangularLayer.swift */; };
 		A11668E11EA02FD1006D33F1 /* TriangleLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A11668E01EA02FD1006D33F1 /* TriangleLayer.swift */; };
+		A11668E31EA04559006D33F1 /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = A11668E21EA04558006D33F1 /* logo.png */; };
 		A119720E1E7BC12B00739E35 /* CameraVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A119720D1E7BC12B00739E35 /* CameraVC.swift */; };
 		A12076D81E8B2E6500869470 /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A12076D51E8B2E6500869470 /* CameraViewController.swift */; };
 		A12076D91E8B2E6500869470 /* PhotoCaptureDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A12076D61E8B2E6500869470 /* PhotoCaptureDelegate.swift */; };
 		A12076DA1E8B2E6500869470 /* PreviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A12076D71E8B2E6500869470 /* PreviewView.swift */; };
-		A126BDF21E96BF72000B9F69 /* Icon-60@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = A126BDF11E96BF72000B9F69 /* Icon-60@3x.png */; };
+		A126BDF21E96BF72000B9F69 /* app_Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = A126BDF11E96BF72000B9F69 /* app_Icon.png */; };
 		A126BDF41E96C776000B9F69 /* ArticleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A126BDF31E96C776000B9F69 /* ArticleView.swift */; };
 		A126BDFA1E96C8FD000B9F69 /* ArticleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A126BDF91E96C8FD000B9F69 /* ArticleCell.swift */; };
 		A126BDFC1E96C9B9000B9F69 /* Article.swift in Sources */ = {isa = PBXBuildFile; fileRef = A126BDFB1E96C9B9000B9F69 /* Article.swift */; };
@@ -30,6 +31,7 @@
 		A131029A1E6AB4E1008ABE4E /* MiNewsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A13102991E6AB4E1008ABE4E /* MiNewsTests.swift */; };
 		A13102A51E6AB4E1008ABE4E /* MiNewsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A13102A41E6AB4E1008ABE4E /* MiNewsUITests.swift */; };
 		A1B8A0AE1E78ACAC002B4C05 /* PageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1B8A0AD1E78ACAB002B4C05 /* PageVC.swift */; };
+		A1E6D04F1EA580770014F0C5 /* ReportVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1E6D04E1EA580760014F0C5 /* ReportVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,12 +55,13 @@
 		A11506C91E8C6250009B3C2A /* SimpleCameraVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SimpleCameraVC.swift; sourceTree = "<group>"; };
 		A11668DE1EA02FA2006D33F1 /* RectangularLayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RectangularLayer.swift; sourceTree = "<group>"; };
 		A11668E01EA02FD1006D33F1 /* TriangleLayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TriangleLayer.swift; sourceTree = "<group>"; };
+		A11668E21EA04558006D33F1 /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = "<group>"; };
 		A119720D1E7BC12B00739E35 /* CameraVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CameraVC.swift; path = ../CameraVC.swift; sourceTree = "<group>"; };
 		A12076D51E8B2E6500869470 /* CameraViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
 		A12076D61E8B2E6500869470 /* PhotoCaptureDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoCaptureDelegate.swift; sourceTree = "<group>"; };
 		A12076D71E8B2E6500869470 /* PreviewView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreviewView.swift; sourceTree = "<group>"; };
 		A12076DB1E8B6C8000869470 /* MiNews-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MiNews-Bridging-Header.h"; sourceTree = "<group>"; };
-		A126BDF11E96BF72000B9F69 /* Icon-60@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-60@3x.png"; sourceTree = "<group>"; };
+		A126BDF11E96BF72000B9F69 /* app_Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = app_Icon.png; sourceTree = "<group>"; };
 		A126BDF31E96C776000B9F69 /* ArticleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArticleView.swift; sourceTree = "<group>"; };
 		A126BDF91E96C8FD000B9F69 /* ArticleCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArticleCell.swift; sourceTree = "<group>"; };
 		A126BDFB1E96C9B9000B9F69 /* Article.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Article.swift; sourceTree = "<group>"; };
@@ -80,6 +83,7 @@
 		A13102A41E6AB4E1008ABE4E /* MiNewsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiNewsUITests.swift; sourceTree = "<group>"; };
 		A13102A61E6AB4E1008ABE4E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A1B8A0AD1E78ACAB002B4C05 /* PageVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageVC.swift; sourceTree = "<group>"; };
+		A1E6D04E1EA580760014F0C5 /* ReportVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReportVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,7 +125,8 @@
 		A126C18C1EA00BF300DEF7A6 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
-				A126BDF11E96BF72000B9F69 /* Icon-60@3x.png */,
+				A11668E21EA04558006D33F1 /* logo.png */,
+				A126BDF11E96BF72000B9F69 /* app_Icon.png */,
 				A126C1881EA00BA900DEF7A6 /* Colors.swift */,
 			);
 			name = Utilities;
@@ -184,6 +189,8 @@
 			children = (
 				A13102801E6AB4E1008ABE4E /* AppDelegate.swift */,
 				A13102881E6AB4E1008ABE4E /* Main.storyboard */,
+				A1E6D04E1EA580760014F0C5 /* ReportVC.swift */,
+				A131028D1E6AB4E1008ABE4E /* LaunchScreen.storyboard */,
 				A1B8A0AD1E78ACAB002B4C05 /* PageVC.swift */,
 				A131028B1E6AB4E1008ABE4E /* Assets.xcassets */,
 				A126C18D1EA00C0D00DEF7A6 /* Loading Page */,
@@ -192,7 +199,6 @@
 				A126C18C1EA00BF300DEF7A6 /* Utilities */,
 				A13102901E6AB4E1008ABE4E /* Info.plist */,
 				A126C18F1EA00CCE00DEF7A6 /* Samples */,
-				A131028D1E6AB4E1008ABE4E /* LaunchScreen.storyboard */,
 			);
 			path = MiNews;
 			sourceTree = "<group>";
@@ -326,7 +332,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A126BDF21E96BF72000B9F69 /* Icon-60@3x.png in Resources */,
+				A126BDF21E96BF72000B9F69 /* app_Icon.png in Resources */,
+				A11668E31EA04559006D33F1 /* logo.png in Resources */,
 				A131028F1E6AB4E1008ABE4E /* LaunchScreen.storyboard in Resources */,
 				A131028C1E6AB4E1008ABE4E /* Assets.xcassets in Resources */,
 				A131028A1E6AB4E1008ABE4E /* Main.storyboard in Resources */,
@@ -358,6 +365,7 @@
 				A1B8A0AE1E78ACAC002B4C05 /* PageVC.swift in Sources */,
 				A119720E1E7BC12B00739E35 /* CameraVC.swift in Sources */,
 				A126BDF41E96C776000B9F69 /* ArticleView.swift in Sources */,
+				A1E6D04F1EA580770014F0C5 /* ReportVC.swift in Sources */,
 				A126C1851E9FF7AD00DEF7A6 /* WebViewVC.swift in Sources */,
 				A126C1931EA01A7300DEF7A6 /* OvalLayer.swift in Sources */,
 				A11668DF1EA02FA2006D33F1 /* RectangularLayer.swift in Sources */,
