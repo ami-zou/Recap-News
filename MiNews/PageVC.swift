@@ -11,7 +11,7 @@ import UIKit
 class PageVC: UIPageViewController, UIPageViewControllerDataSource, UIPageViewControllerDelegate {
     lazy var VCArr : [UIViewController] = { //lazy: initiated when called   //put "=" to initialize /compute property
         return [self.VCInstance(name: "LoadVC"),
-                self.VCInstance(name: "logoPage"),
+                //self.VCInstance(name: "logoPage"),
                 self.VCInstance(name: "statement"),
                 self.VCInstance(name: "ArticleVC"),
                 self.VCInstance(name: "SimpleCameraVC"),

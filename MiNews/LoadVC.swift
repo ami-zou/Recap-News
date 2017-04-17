@@ -9,7 +9,6 @@
 import UIKit
 
 class LoadVC: UIViewController, LoadViewDelegate {
-    //var loadView: LoadView = LoadView( frame : CGRect.zero)
     var holderView = LoadView(frame: CGRect.zero )
     
     //let myTableView: UITableView = UITableView(frame: .zero, style: .grouped)

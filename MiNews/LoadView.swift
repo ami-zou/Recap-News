@@ -35,7 +35,7 @@ class LoadView: UIView {
     
     func addOval(){
         layer.addSublayer(ovalLayer)
-        ovalLayer.expand()
+        //ovalLayer.expand()
         Timer.scheduledTimer(timeInterval: 0.3, target: self, selector: #selector(LoadView.wobbleOval),
                                                userInfo: nil, repeats: false)
     }

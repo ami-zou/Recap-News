@@ -12,10 +12,27 @@ class OvalLayer: CAShapeLayer {
     
     let animationDuration: CFTimeInterval = 0.3
     
+    //let image = UIImage(named: "logo.png") // Assign your image
+  
+//    let imageSubLayer = CALayer()
+//    imageSubLayer.contents = image?.CGImage
+//    shape.addSublayer(imageSubLayer)
+    
     override init() {
         super.init()
-        fillColor = Colors.theme.cgColor //change color here
-        path = ovalPathSmall.cgPath
+           //fillColor = Colors.clear.cgColor //change color here
+        //fillColor = UIColor(patternImage: image!).cgColor
+        contents = UIImage(named: "logo")?.cgImage
+        
+        let image = #imageLiteral(resourceName: "logo")
+        //let image = UIImage(named: "logo")?
+        let logoSubLayer = CALayer()
+        logoSubLayer.contents = image.cgImage
+        logoSubLayer.frame = self.bounds
+        //logoSubLayer.mask = logoSubLayer
+        addSublayer(logoSubLayer)
+        
+        path = ovalPathLarge.cgPath
         
     }
     
@@ -53,6 +70,15 @@ class OvalLayer: CAShapeLayer {
     }
     
     func wobble() {
+        //add picture first, then animation
+        /*
+        let image = #imageLiteral(resourceName: "logo")
+        //let image = UIImage(named: "logo")?
+        let logoSubLayer = CALayer()
+        logoSubLayer.contents = image.cgImage
+        addSublayer(logoSubLayer)
+ */
+ 
         //1
         let wobbleAnimation1: CABasicAnimation = CABasicAnimation(keyPath: "path")
         wobbleAnimation1.fromValue = ovalPathLarge.cgPath
@@ -86,6 +112,7 @@ class OvalLayer: CAShapeLayer {
         wobbleAnimationGroup.animations = [wobbleAnimation1, wobbleAnimation2, wobbleAnimation3, wobbleAnimation4]
         wobbleAnimationGroup.duration = wobbleAnimation4.beginTime + wobbleAnimation4.duration
         wobbleAnimationGroup.repeatCount = 2
+        
         add(wobbleAnimationGroup, forKey: nil)
     }
     
