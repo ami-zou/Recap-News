@@ -599,7 +599,7 @@ Launch screen and page 1: TO DO: 1. add logo picture to launch screen, 2. create
 
 Page 3: add features
 
-I haven’t formally learned Xcode nor Swift. This is a side project which I started a month and half ago. The idea and prototype is developed by our team (Daniel Stratton, Conrad Ma, Michael Krantz and me). 
+I haven’t formally learned Xcode nor Swift. This is a side project which I started a month and half ago. The idea and prototype are developed by our team (Daniel Stratton, Conrad Ma, Michael Krantz and me). 
 
 See the latest version of MiNews at my GitHub: amigomushroom and feel free to email me any suggestions at yixuanz@cs.unc.edu</mutableString>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
