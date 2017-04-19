@@ -34,7 +34,7 @@ class ArticleView: UIViewController, UITableViewDelegate, UITableViewDataSource 
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        //fetchArticles()
+        fetchArticles()
     }
     
     func fetchArticles(){

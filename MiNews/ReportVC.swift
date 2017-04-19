@@ -30,12 +30,15 @@ class ReportVC: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
-    
-    @IBAction func submitStory(submitBotton: UIButton) {
-        let alert = UIAlertController(title: "Alert", message: "Congratulations! Your story has been succesfully submitted!", preferredStyle: UIAlertControllerStyle.alert)
-        alert.addAction(UIAlertAction(title: "Good", style: UIAlertActionStyle.default, handler: nil))
+
+    @IBAction func submitStory(_ sender: Any) {
+        let alert = UIAlertController(title: "MiNews Alert", message: "Congratulations! Your story has been succesfully submitted!", preferredStyle: UIAlertControllerStyle.alert)
+        
+        let defaultAction = UIAlertAction(title: "good", style: .default, handler: nil)
+        
+        alert.addAction(defaultAction)
+        
         self.present(alert, animated: true, completion: nil)
     }
-    
 
 }
