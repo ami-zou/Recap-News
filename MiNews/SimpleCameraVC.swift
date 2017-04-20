@@ -234,16 +234,16 @@ class SimpleCameraVC: UIViewController, UIImagePickerControllerDelegate, AVCaptu
                 
                 self.movieFileOutput = nil
             
-          /*
+          
                 if self.photoOutput.isLivePhotoCaptureSupported {
                     self.photoOutput.isLivePhotoCaptureEnabled = true
                     
                     DispatchQueue.main.async {
-                        //self.livePhotoModeButton.isEnabled = true
-                        //self.livePhotoModeButton.isHidden = false
+                        self.livePhotoModeButton.isEnabled = true
+                        self.livePhotoModeButton.isHidden = false
                     }
                 }
-          */
+          
             }
         }
         else if captureModeControl.selectedSegmentIndex == CaptureMode.movie.rawValue
