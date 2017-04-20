@@ -591,20 +591,20 @@
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="WXm-6z-ClQ">
                                 <rect key="frame" x="16" y="28" width="343" height="631"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <string key="text">MiNews is a co-creation local news App. Users can take photos and videos within the app and upload them directly to local news company.
+                                <mutableString key="text">MiNews is a co-creation local news App. Users can take photos and videos within the app and upload them directly to local news company.
 Page 1: sorted news according to users’ preferences. Search bar on top where user can search the hottest topics.
 Page 2: camera/video taking page. User can take photos, videos, and live photos, and select photos from album.
 Page 3: upload page where user can add title, hashtag, and description of the materials they wanted to upload.
 
-Statement: as of April 17, 4pm PDT, I’ve finished most code for launchScreen animation, page 1, and page 2 based on Raywenderlich.com, Vasil Nunev's News Reader tutorial, and Apple’s open source simple camera app (see original code in Samples folder). TO DO: 1. add a demo view page 2. customize buttons
+Statement: as of April 19, 11pm PDT, I’ve finished most code for launchScreen animation, page 1, and page 2 based on Raywenderlich.com, Vasil Nunev's News Reader tutorial, and Apple’s open source simple camera app (see original code in Samples folder). TO DO: 1. add a demo view page 2. customize camera/video buttons
 
-Launch screen and page 1: TO DO: 1. add logo picture to launch screen, 2. create segue for page one. 
+Launch screen and page 1: TO DO: 1. add logo picture to launch screen, 2. add style to statement. 
 
-Page 3: add features
+Page 3: 1.connect to gallery and camera, 2. database for storing title and story
 
 I haven’t formally learned Xcode nor Swift. This is a side project which I started a month and half ago. The idea and prototype are developed by our team (Daniel Stratton, Conrad Ma, Michael Krantz and me). 
 
-See the latest version of MiNews at my GitHub: amigomushroom and feel free to email me any suggestions at yixuanz@cs.unc.edu</string>
+See the latest version of MiNews at my GitHub: amigomushroom and feel free to email me any suggestions at yixuanz@cs.unc.edu</mutableString>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
