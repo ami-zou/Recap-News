@@ -20,10 +20,20 @@ class LoadVC: UIViewController, LoadViewDelegate {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         addHolderView()
+        Timer.scheduledTimer(timeInterval: 2.85, target: self, selector: #selector(LoadVC.toPageView), userInfo: nil, repeats: false)
+        //Timer.scheduledTimerWithTimeInterval(timeInterval(3), target: self, selector: "toPageView", userInfo: nil, repeats: false)
+        //toPageView()
     }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
+    }
+    
+    func toPageView(){
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let pageVC = storyboard.instantiateViewController(withIdentifier: "PageVC") as! PageVC
+        self.present(pageVC, animated: true, completion: nil)
+        //self.navigationController?.pushViewController(PageVC, animated: true)
     }
     
     func addHolderView() {
