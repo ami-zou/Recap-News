@@ -30,9 +30,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OnD-j0-ClD">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OnD-j0-ClD">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="20"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="1" green="0.43903888499999999" blue="0.53620619189999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MiNews" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6XE-mL-OWL">
@@ -46,8 +45,11 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="247" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="C16-pe-2Ti">
-                                <rect key="frame" x="0.0" y="102" width="375" height="565"/>
+                                <rect key="frame" x="0.0" y="129" width="375" height="538"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="538" id="ge1-ZX-uda"/>
+                                </constraints>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="articleCell" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="articleCell" rowHeight="247" id="bnJ-ad-CPr" customClass="ArticleCell" customModule="MiNews" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="247"/>
@@ -57,13 +59,13 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IBC-QD-g6O">
-                                                    <rect key="frame" x="28" y="8" width="319" height="19.5"/>
+                                                    <rect key="frame" x="28" y="8" width="319" height="20"/>
                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="t1o-aO-vMC">
-                                                    <rect key="frame" x="28" y="35.5" width="319" height="175"/>
+                                                    <rect key="frame" x="28" y="36" width="319" height="175"/>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description! Blah blah.....description..." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LaM-iK-Ji2">
                                                     <rect key="frame" x="28" y="214" width="319" height="21"/>
@@ -97,34 +99,52 @@
                                     <outlet property="delegate" destination="ehs-TB-jqc" id="qrI-jq-C9L"/>
                                 </connections>
                             </tableView>
-                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="li6-70-PoO">
-                                <rect key="frame" x="0.0" y="58" width="375" height="44"/>
-                                <color key="backgroundColor" red="1" green="0.42803853219999999" blue="0.59433600850000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <color key="barTintColor" red="1" green="0.43903888499999999" blue="0.53620619189999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <textAttributes key="titleTextAttributes">
-                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </textAttributes>
-                                <items>
-                                    <navigationItem title="Search Here (TO DO)" id="JfH-2y-XMb"/>
-                                </items>
-                            </navigationBar>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zws-i9-I6Y">
+                                <rect key="frame" x="0.0" y="52" width="375" height="33"/>
+                                <subviews>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Menlo Park, CA" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KKh-Yl-1VS">
+                                        <rect key="frame" x="118" y="1" width="138" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" red="1" green="0.43903888499999999" blue="0.53620619189999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="tintColor" red="1" green="0.43903888499999999" blue="0.53620619189999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                </subviews>
+                                <color key="backgroundColor" red="1" green="0.43903888499999999" blue="0.53620619189999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </view>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="bn4-8x-q0o">
+                                <rect key="frame" x="0.0" y="85" width="375" height="44"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="ehs-TB-jqc" id="vnc-uD-XGz"/>
+                                </connections>
+                            </searchBar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="C16-pe-2Ti" firstAttribute="top" secondItem="li6-70-PoO" secondAttribute="bottom" id="3pv-1h-VGp"/>
+                            <constraint firstItem="C16-pe-2Ti" firstAttribute="trailing" secondItem="bn4-8x-q0o" secondAttribute="trailing" id="0fH-IO-7up"/>
+                            <constraint firstItem="OnD-j0-ClD" firstAttribute="bottom" secondItem="L4o-JN-09x" secondAttribute="bottom" id="39F-2s-Wh3"/>
                             <constraint firstAttribute="trailingMargin" secondItem="6XE-mL-OWL" secondAttribute="trailing" constant="-16" id="5ho-Oy-S0C"/>
+                            <constraint firstItem="zws-i9-I6Y" firstAttribute="bottom" secondItem="bn4-8x-q0o" secondAttribute="top" id="74w-eV-t4e"/>
                             <constraint firstAttribute="trailing" secondItem="C16-pe-2Ti" secondAttribute="trailing" id="FJm-la-qv2"/>
+                            <constraint firstItem="C16-pe-2Ti" firstAttribute="top" secondItem="bn4-8x-q0o" secondAttribute="bottom" id="FcT-wL-B9H"/>
+                            <constraint firstItem="C16-pe-2Ti" firstAttribute="trailing" secondItem="OnD-j0-ClD" secondAttribute="trailing" id="ICa-9u-pVp"/>
                             <constraint firstItem="6XE-mL-OWL" firstAttribute="top" secondItem="L4o-JN-09x" secondAttribute="bottom" id="NSK-h7-xk9"/>
                             <constraint firstItem="6XE-mL-OWL" firstAttribute="leading" secondItem="fvY-no-0oe" secondAttribute="leadingMargin" constant="-16" id="Pc6-8V-i0w"/>
-                            <constraint firstItem="li6-70-PoO" firstAttribute="leading" secondItem="6XE-mL-OWL" secondAttribute="leading" id="QpH-KH-n6h"/>
-                            <constraint firstItem="li6-70-PoO" firstAttribute="top" secondItem="6XE-mL-OWL" secondAttribute="bottom" id="WGM-xk-2te"/>
                             <constraint firstItem="C16-pe-2Ti" firstAttribute="leading" secondItem="fvY-no-0oe" secondAttribute="leading" id="XwA-Vr-3md"/>
+                            <constraint firstItem="C16-pe-2Ti" firstAttribute="trailing" secondItem="zws-i9-I6Y" secondAttribute="trailing" id="YVi-Kd-GYd"/>
                             <constraint firstItem="Dv3-A0-6pb" firstAttribute="top" secondItem="C16-pe-2Ti" secondAttribute="bottom" id="de2-7D-vup"/>
-                            <constraint firstItem="li6-70-PoO" firstAttribute="trailing" secondItem="6XE-mL-OWL" secondAttribute="trailing" id="pwf-3z-vKA"/>
+                            <constraint firstItem="C16-pe-2Ti" firstAttribute="leading" secondItem="zws-i9-I6Y" secondAttribute="leading" id="hoe-0d-iZF"/>
+                            <constraint firstItem="C16-pe-2Ti" firstAttribute="leading" secondItem="bn4-8x-q0o" secondAttribute="leading" id="hr5-Um-AS8"/>
+                            <constraint firstItem="zws-i9-I6Y" firstAttribute="top" secondItem="L4o-JN-09x" secondAttribute="bottom" constant="32" id="oMq-fT-WPU"/>
+                            <constraint firstItem="OnD-j0-ClD" firstAttribute="top" secondItem="fvY-no-0oe" secondAttribute="top" id="wpu-ga-BIh"/>
+                            <constraint firstItem="C16-pe-2Ti" firstAttribute="leading" secondItem="OnD-j0-ClD" secondAttribute="leading" id="xx1-3r-3dP"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="searchDisplayController" destination="gYS-Ng-fAo" id="hd4-KQ-wnw"/>
+                        <outlet property="searchDisplayController" destination="5h5-Em-YWm" id="dKU-xK-e7h"/>
                         <outlet property="tableView" destination="C16-pe-2Ti" id="Ala-P7-NF9"/>
                     </connections>
                 </viewController>
@@ -137,8 +157,17 @@
                         <outlet property="searchResultsDelegate" destination="ehs-TB-jqc" id="dTx-gk-vjo"/>
                     </connections>
                 </searchDisplayController>
+                <searchDisplayController id="5h5-Em-YWm">
+                    <connections>
+                        <outlet property="delegate" destination="ehs-TB-jqc" id="vj4-Nv-gb5"/>
+                        <outlet property="searchBar" destination="bn4-8x-q0o" id="pFv-As-i2a"/>
+                        <outlet property="searchContentsController" destination="ehs-TB-jqc" id="jzC-Sd-1dz"/>
+                        <outlet property="searchResultsDataSource" destination="ehs-TB-jqc" id="ln0-Ey-c9r"/>
+                        <outlet property="searchResultsDelegate" destination="ehs-TB-jqc" id="9MG-bV-csa"/>
+                    </connections>
+                </searchDisplayController>
             </objects>
-            <point key="canvasLocation" x="1182" y="-273"/>
+            <point key="canvasLocation" x="1181.5999999999999" y="-273.01349325337333"/>
         </scene>
         <!--Web ViewVC-->
         <scene sceneID="5gp-cf-Ytr">
@@ -356,6 +385,9 @@
                                 <rect key="frame" x="208" y="166" width="129" height="118"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="album"/>
+                                <connections>
+                                    <action selector="selectPhoto:" destination="9z3-Gk-D6q" eventType="touchUpInside" id="oNr-VY-Y65"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.43903888499999999" blue="0.53620619189999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -596,7 +628,7 @@ Page 1: sorted news according to users’ preferences. Search bar on top where u
 Page 2: camera/video taking page. User can take photos, videos, and live photos, and select photos from album.
 Page 3: upload page where user can add title, hashtag, and description of the materials they wanted to upload.
 
-Statement: as of April 19, 11pm PDT, I’ve finished most code for launchScreen animation, page 1, and page 2 based on Raywenderlich.com, Vasil Nunev's News Reader tutorial, and Apple’s open source simple camera app (see original code in Samples folder). TO DO: 1. add a demo view page 2. customize camera/video buttons
+Statement: as of April 23, 5pm PDT, I’ve finished most code for launchScreen animation, page 1, and page 2 based on Raywenderlich.com, Vasil Nunev's News Reader tutorial, and Apple’s open source simple camera app (see original code in Samples folder). TO DO: 1. add a demo view page 2. add table searching for title and catogories
 
 Launch screen and page 1: TO DO: 1. add logo picture to launch screen, 2. add style to statement. 
 

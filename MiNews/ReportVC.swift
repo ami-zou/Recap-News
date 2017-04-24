@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ReportVC: UIViewController {
+class ReportVC: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
     @IBOutlet weak var hashTitle: UITextField!
     
@@ -40,5 +40,16 @@ class ReportVC: UIViewController {
         
         self.present(alert, animated: true, completion: nil)
     }
+    
+    @IBAction func selectPhoto(_ sender: Any) {
+        if UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.photoLibrary){
+            let imagePicker = UIImagePickerController()
+            imagePicker.delegate = self as UIImagePickerControllerDelegate & UINavigationControllerDelegate
+            imagePicker.sourceType = UIImagePickerControllerSourceType.photoLibrary; //don't forget ";"
+            imagePicker.allowsEditing = true //can edit
+            self.present(imagePicker, animated: true, completion: nil)
+        }
+    }
+    
 
 }
