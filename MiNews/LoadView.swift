@@ -12,7 +12,7 @@ protocol LoadViewDelegate: class {
     func animateLabel()
 }
 
-class LoadView: UIView {
+class LoadView: UIView{
     var parentFrame: CGRect = CGRect.zero
     weak var delegate: LoadViewDelegate?
     
@@ -24,6 +24,14 @@ class LoadView: UIView {
     let blueRectangleLayer = RectangleLayer()
     let clearRectangleLayer = RectangleLayer()
     
+    let logoLayer = CALayer()
+    let image = #imageLiteral(resourceName: "logo")
+
+    //imageLayer.contents = UIImage(named: "pic")?.CGImage
+    //imageLayer.frame = view.bounds
+    //imageLayer.mask = imageSubLayer
+    //view.layer.addSublayer(imageLayer)
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         self.backgroundColor = Colors.clear //return;
@@ -34,8 +42,18 @@ class LoadView: UIView {
     }
     
     func addOval(){
+        logoLayer.contents = image.cgImage
+        logoLayer.frame = self.bounds
+        logoLayer.mask = ovalLayer
+        
+        //ovalLayer.addSublayer(logoLayer)
+        
+        //ovalLayer.contents = image.cgImage
+        
         layer.addSublayer(ovalLayer)
+        layer.addSublayer(logoLayer)
         //ovalLayer.expand()
+        
         Timer.scheduledTimer(timeInterval: 0.3, target: self, selector: #selector(LoadView.wobbleOval),
                                                userInfo: nil, repeats: false)
     }

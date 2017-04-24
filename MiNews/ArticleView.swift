@@ -138,12 +138,14 @@ class ArticleView: UIViewController, UITableViewDelegate, UITableViewDataSource,
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let webVC = UIStoryboard.init(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "WebViewVC") as! WebViewVC;
+        let webVC = UIStoryboard.init(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "web") as! WebViewVC;
         
         webVC.url = self.articles?[indexPath.item].url
         
         self.present(webVC, animated: true, completion: nil)
     }
+    
+    
     
 }
 

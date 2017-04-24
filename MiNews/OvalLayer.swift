@@ -22,13 +22,15 @@ class OvalLayer: CAShapeLayer {
         super.init()
            //fillColor = Colors.clear.cgColor //change color here
         //fillColor = UIColor(patternImage: image!).cgColor
-        contents = UIImage(named: "logo")?.cgImage
+        
+        //contents = UIImage(named: "logo")?.cgImage
         
         let image = #imageLiteral(resourceName: "logo")
         //let image = UIImage(named: "logo")?
         let logoSubLayer = CALayer()
-        logoSubLayer.contents = image.cgImage
-        logoSubLayer.frame = self.bounds
+        //logoSubLayer.contents = image.cgImage
+        //logoSubLayer.frame = self.bounds
+        //logoSubLayer.mask = self
         //logoSubLayer.mask = logoSubLayer
         addSublayer(logoSubLayer)
         
