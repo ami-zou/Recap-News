@@ -51,7 +51,8 @@ class LoadView: UIView{
         //ovalLayer.contents = image.cgImage
         
         layer.addSublayer(ovalLayer)
-        layer.addSublayer(logoLayer)
+        //layer.addSublayer(logoLayer)
+        
         //ovalLayer.expand()
         
         Timer.scheduledTimer(timeInterval: 0.3, target: self, selector: #selector(LoadView.wobbleOval),

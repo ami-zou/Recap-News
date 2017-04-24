@@ -21,18 +21,20 @@ class OvalLayer: CAShapeLayer {
     override init() {
         super.init()
            //fillColor = Colors.clear.cgColor //change color here
-        //fillColor = UIColor(patternImage: image!).cgColor
+        fillColor = UIColor(patternImage: #imageLiteral(resourceName: "star")).cgColor
         
-        //contents = UIImage(named: "logo")?.cgImage
+        fillRule = kCAFillRuleEvenOdd
         
-        let image = #imageLiteral(resourceName: "logo")
+        contents = UIImage(named: "logo")?.cgImage
+        
+        //let image = #imageLiteral(resourceName: "logo")
         //let image = UIImage(named: "logo")?
-        let logoSubLayer = CALayer()
+        //let logoSubLayer = CALayer()
         //logoSubLayer.contents = image.cgImage
         //logoSubLayer.frame = self.bounds
         //logoSubLayer.mask = self
         //logoSubLayer.mask = logoSubLayer
-        addSublayer(logoSubLayer)
+        //addSublayer(logoSubLayer)
         
         path = ovalPathLarge.cgPath
         

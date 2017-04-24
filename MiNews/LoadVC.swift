@@ -62,7 +62,7 @@ class LoadVC: UIViewController, LoadViewDelegate {
     
     func buttonPressed(_ sender: UIButton!) {
         view.backgroundColor = Colors.white
-        view.subviews.map({ $0.removeFromSuperview() })
+        //view.subviews.map({ $0.removeFromSuperview() })
         holderView = LoadView(frame: CGRect.zero)
         addHolderView()
     }
