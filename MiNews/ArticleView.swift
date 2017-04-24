@@ -25,20 +25,60 @@
 
 import UIKit
 
-class ArticleView: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class ArticleView: UIViewController, UITableViewDelegate, UITableViewDataSource, UIPickerViewDelegate, UIPickerViewDataSource {
     
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var locationText: UITextField!
     
     var articles: [Article]? = []
+    var locations: [String] = ["...current location", "San Francisco, CA", "Chapel Hill, NC", "Washington D.C., MD ", "New York City, NY"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
+    
+    //***Loading fields for locations***//
+        let picker = UIPickerView()
+        picker.delegate   = self
+        picker.dataSource = self
+    
+        self.locationText.inputView = picker
         
-       // fetchArticles()
+    //***Fetching articles from News API***//
+        fetchArticles(website: "HP")
     }
     
-    func fetchArticles(){
-        let urlRequest = URLRequest(url: URL(string: "https://newsapi.org/v1/articles?source=google-news&sortBy=top&apiKey=3e56f15fb422469082480f36fa7609c4")! ) //put a string URL inside -- now: Google News
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 1
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return self.locations.count
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        return self.locations[row]
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        self.locationText.text = self.locations[row]
+        self.locationText.endEditing(true)
+        fetchArticles(website: "NYT")
+    }
+    
+    func fetchArticles(website:String){
+        var urlRequest = URLRequest(url: URL(string:"https://newsapi.org/v1/articles?source=the-huffington-post&sortBy=top&apiKey=3e56f15fb422469082480f36fa7609c4")! ) //put a string URL inside -- now: Huffington Post
+        
+        switch website {
+        case "Google":
+            urlRequest = URLRequest(url: URL(string:"https://newsapi.org/v1/articles?source=google-news&sortBy=top&apiKey=3e56f15fb422469082480f36fa7609c4")! )
+        case "NYT":
+            urlRequest = URLRequest(url: URL(string:"https://newsapi.org/v1/articles?source=the-new-york-times&sortBy=top&apiKey=3e56f15fb422469082480f36fa7609c4")! )
+        case "HP":
+            urlRequest = URLRequest(url: URL(string:"https://newsapi.org/v1/articles?source=the-huffington-post&sortBy=top&apiKey=3e56f15fb422469082480f36fa7609c4")! )
+        default:
+            urlRequest = URLRequest(url: URL(string:"https://newsapi.org/v1/articles?source=the-huffington-post&sortBy=top&apiKey=3e56f15fb422469082480f36fa7609c4")! )
+        }
+        
         
         let task = URLSession.shared.dataTask(with: urlRequest) { (data, response, error) in
             if error != nil {
