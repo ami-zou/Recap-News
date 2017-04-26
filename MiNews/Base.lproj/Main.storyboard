@@ -48,7 +48,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zws-i9-I6Y">
                                 <rect key="frame" x="0.0" y="52" width="375" height="74"/>
                                 <subviews>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="New York City, NY" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KKh-Yl-1VS">
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Palo Alto, CA" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KKh-Yl-1VS">
                                         <rect key="frame" x="107" y="3" width="162" height="18"/>
                                         <color key="backgroundColor" red="0.96078431369999995" green="0.36862745099999999" blue="0.3803921569" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
@@ -78,18 +78,18 @@
                                     <constraint firstItem="bn4-8x-q0o" firstAttribute="top" secondItem="zws-i9-I6Y" secondAttribute="topMargin" constant="22" id="phK-xb-eOX"/>
                                 </constraints>
                             </view>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="257" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="C16-pe-2Ti">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="245" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="C16-pe-2Ti">
                                 <rect key="frame" x="0.0" y="126" width="375" height="541"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="541" id="ge1-ZX-uda"/>
                                 </constraints>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="articleCell" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="articleCell" rowHeight="257" id="bnJ-ad-CPr" customClass="ArticleCell" customModule="MiNews" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="375" height="257"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="articleCell" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="articleCell" rowHeight="245" id="bnJ-ad-CPr" customClass="ArticleCell" customModule="MiNews" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="245"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="bnJ-ad-CPr" id="Riu-RR-fWt">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="257"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="245"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IBC-QD-g6O">
@@ -99,10 +99,10 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="t1o-aO-vMC">
-                                                    <rect key="frame" x="28" y="36" width="319" height="165"/>
+                                                    <rect key="frame" x="28" y="36" width="319" height="152"/>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description! Blah blah.....description..." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LaM-iK-Ji2">
-                                                    <rect key="frame" x="28" y="224" width="319" height="21"/>
+                                                    <rect key="frame" x="28" y="205" width="319" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -112,7 +112,7 @@
                                                 <constraint firstItem="t1o-aO-vMC" firstAttribute="leading" secondItem="Riu-RR-fWt" secondAttribute="leadingMargin" constant="20" id="AA8-ci-VFh"/>
                                                 <constraint firstItem="IBC-QD-g6O" firstAttribute="leading" secondItem="Riu-RR-fWt" secondAttribute="leadingMargin" constant="20" id="Kkv-X2-L5n"/>
                                                 <constraint firstItem="t1o-aO-vMC" firstAttribute="centerY" secondItem="Riu-RR-fWt" secondAttribute="centerY" constant="-9.75" id="Mol-ro-U5P"/>
-                                                <constraint firstAttribute="bottomMargin" secondItem="LaM-iK-Ji2" secondAttribute="bottom" constant="4" id="ccX-Ug-k6U"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="LaM-iK-Ji2" secondAttribute="bottom" constant="10.5" id="ccX-Ug-k6U"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="t1o-aO-vMC" secondAttribute="trailing" constant="20" id="hyO-ou-0jN"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="LaM-iK-Ji2" secondAttribute="trailing" constant="20" id="jJd-8a-TYE"/>
                                                 <constraint firstItem="LaM-iK-Ji2" firstAttribute="leading" secondItem="Riu-RR-fWt" secondAttribute="leadingMargin" constant="20" id="kQN-xB-nkw"/>
@@ -535,23 +535,15 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aUf-N2-bz1">
-                                <rect key="frame" x="287" y="11" width="69" height="65"/>
+                                <rect key="frame" x="14" y="11" width="69" height="65"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="camera-switch"/>
                                 <connections>
                                     <action selector="switchCamera:" destination="3xm-nO-KhW" eventType="touchUpInside" id="kwa-sI-BOu"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rh7-bU-PMx">
-                                <rect key="frame" x="16" y="11" width="71" height="66"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" image="album"/>
-                                <connections>
-                                    <action selector="selectPhoto:" destination="3xm-nO-KhW" eventType="touchUpInside" id="gST-IV-rQ5"/>
-                                </connections>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Live" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a5v-wI-kHK">
-                                <rect key="frame" x="166" y="16" width="42" height="46"/>
+                                <rect key="frame" x="166" y="11" width="42" height="46"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <color key="textColor" red="0.96078431369999995" green="0.36862745099999999" blue="0.3803921569" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -571,7 +563,6 @@
                         <outlet property="preView" destination="TTN-sA-ocs" id="xv4-mK-PVy"/>
                         <outlet property="recordButton" destination="ak1-lw-88w" id="UCU-M7-feL"/>
                         <outlet property="resumeButton" destination="xFv-GZ-DVy" id="sAO-fB-5Se"/>
-                        <outlet property="selectButton" destination="Rh7-bU-PMx" id="VJs-Zn-VBa"/>
                     </connections>
                 </viewController>
                 <tapGestureRecognizer id="lU7-hO-Zti">
@@ -635,7 +626,7 @@
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="WXm-6z-ClQ">
                                 <rect key="frame" x="16" y="28" width="343" height="631"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <mutableString key="text">Recap News is a co-creation local news App. Users can take photos and videos within the app and upload them directly to local news company.
+                                <string key="text">Recap News is a co-creation local news App. Users can take photos and videos within the app and upload them directly to local news company.
 Page 1: sorted news according to users’ preferences. Search bar on top where user can search the hottest topics.
 Page 2: camera/video taking page. User can take photos, videos, and live photos, and select photos from album.
 Page 3: upload page where user can add title, hashtag, and description of the materials they wanted to upload.
@@ -648,7 +639,7 @@ Page 3: 1.connect to gallery and camera, 2. database for storing title and story
 
 I haven’t formally learned Xcode nor Swift. This is a side project which I started a month and half ago. The idea and prototype are developed by our team (Daniel Stratton, Conrad Ma, Michael Krantz and me). 
 
-See the latest version of Recap at my GitHub: amigomushroom and feel free to email me any suggestions at yixuanz@cs.unc.edu</mutableString>
+See the latest version of Recap at my GitHub: amigomushroom and feel free to email me any suggestions at yixuanz@cs.unc.edu</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
