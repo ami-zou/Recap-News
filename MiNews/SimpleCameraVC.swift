@@ -41,7 +41,7 @@ class SimpleCameraVC: UIViewController, UIImagePickerControllerDelegate, AVCaptu
     */
     @IBOutlet weak var preView: PreviewView!
     @IBOutlet weak var resumeButton: UIButton! //--> resumeInterruptedSession()
-    @IBOutlet weak var selectButton: UIButton! //--> selectPhoto() //TO DO: link to Photo Gallery
+ //   @IBOutlet weak var selectButton: UIButton! //--> selectPhoto() //TO DO: link to Photo Gallery
     @IBOutlet weak var cameraButton: UIButton! //--> switchCamera() :use to switch front and back camera
     @IBOutlet weak var cameraUnavailableLabel: UILabel!
     
@@ -93,7 +93,7 @@ class SimpleCameraVC: UIViewController, UIImagePickerControllerDelegate, AVCaptu
     override func viewDidLoad() {
         super.viewDidLoad()
         cameraButton.isEnabled = false;
-        selectButton.isEnabled = true; //can always access Photo Gallery. (need to add Privacy in Info.plist first)
+//        selectButton.isEnabled = true; //can always access Photo Gallery. (need to add Privacy in Info.plist first)
         photoButton.isEnabled = false;
         recordButton.isEnabled = false;
         livePhotoModeButton.isEnabled = false
@@ -280,7 +280,7 @@ class SimpleCameraVC: UIViewController, UIImagePickerControllerDelegate, AVCaptu
         cameraButton.isEnabled = false
         photoButton.isEnabled = false
         recordButton.isEnabled = false
-        selectButton.isEnabled = true
+ //       selectButton.isEnabled = true
         livePhotoModeButton.isEnabled = false
         captureModeControl.isEnabled = false
         
@@ -347,7 +347,7 @@ class SimpleCameraVC: UIViewController, UIImagePickerControllerDelegate, AVCaptu
             DispatchQueue.main.async { [unowned self] in
                 self.cameraButton.isEnabled = true
                 self.recordButton.isEnabled = self.movieFileOutput != nil
-                self.selectButton.isEnabled = true
+   //             self.selectButton.isEnabled = true
                 self.photoButton.isEnabled = true
                 self.livePhotoModeButton.isEnabled = true
                 self.captureModeControl.isEnabled = true
@@ -587,7 +587,8 @@ class SimpleCameraVC: UIViewController, UIImagePickerControllerDelegate, AVCaptu
     }
 
     
-// MARK: Photo Gallery function //TO DO:
+// MARK: Photo Gallery function 
+/*
     @IBAction func selectPhoto(_ selectButton: UIButton) {
         if UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.photoLibrary){
             let imagePicker = UIImagePickerController()
@@ -597,7 +598,7 @@ class SimpleCameraVC: UIViewController, UIImagePickerControllerDelegate, AVCaptu
             self.present(imagePicker, animated: true, completion: nil)
         }
     }
-    
+*/
 
 // MARK: Device Configuration. Call this on the session queue.
     private func configureSession() {
@@ -726,7 +727,7 @@ class SimpleCameraVC: UIViewController, UIImagePickerControllerDelegate, AVCaptu
                 self.cameraButton.isEnabled = isSessionRunning && self.videoDeviceDiscoverySession.uniqueDevicePositionsCount() > 1
                 self.recordButton.isEnabled = isSessionRunning && self.movieFileOutput != nil
                 self.photoButton.isEnabled = isSessionRunning
-                self.selectButton.isEnabled = isSessionRunning
+     //           self.selectButton.isEnabled = isSessionRunning
                 self.captureModeControl.isEnabled = isSessionRunning
                 self.livePhotoModeButton.isEnabled = isSessionRunning && isLivePhotoCaptureEnabled
                 self.livePhotoModeButton.isHidden = !(isSessionRunning && isLivePhotoCaptureSupported)

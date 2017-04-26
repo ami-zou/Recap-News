@@ -102,7 +102,7 @@
                                                     <rect key="frame" x="28" y="36" width="319" height="152"/>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description! Blah blah.....description..." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LaM-iK-Ji2">
-                                                    <rect key="frame" x="28" y="205" width="319" height="21"/>
+                                                    <rect key="frame" x="28" y="213" width="319" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -112,7 +112,7 @@
                                                 <constraint firstItem="t1o-aO-vMC" firstAttribute="leading" secondItem="Riu-RR-fWt" secondAttribute="leadingMargin" constant="20" id="AA8-ci-VFh"/>
                                                 <constraint firstItem="IBC-QD-g6O" firstAttribute="leading" secondItem="Riu-RR-fWt" secondAttribute="leadingMargin" constant="20" id="Kkv-X2-L5n"/>
                                                 <constraint firstItem="t1o-aO-vMC" firstAttribute="centerY" secondItem="Riu-RR-fWt" secondAttribute="centerY" constant="-9.75" id="Mol-ro-U5P"/>
-                                                <constraint firstAttribute="bottomMargin" secondItem="LaM-iK-Ji2" secondAttribute="bottom" constant="10.5" id="ccX-Ug-k6U"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="LaM-iK-Ji2" secondAttribute="bottom" constant="3" id="ccX-Ug-k6U"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="t1o-aO-vMC" secondAttribute="trailing" constant="20" id="hyO-ou-0jN"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="LaM-iK-Ji2" secondAttribute="trailing" constant="20" id="jJd-8a-TYE"/>
                                                 <constraint firstItem="LaM-iK-Ji2" firstAttribute="leading" secondItem="Riu-RR-fWt" secondAttribute="leadingMargin" constant="20" id="kQN-xB-nkw"/>
