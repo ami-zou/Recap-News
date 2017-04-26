@@ -357,7 +357,7 @@
                                 <color key="backgroundColor" red="0.96078431369999995" green="0.36862745099999999" blue="0.3803921569" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </view>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="This is a story about..." textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="A8A-WO-PRq">
-                                <rect key="frame" x="35" y="326" width="308" height="250"/>
+                                <rect key="frame" x="35" y="333" width="308" height="269"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
@@ -376,13 +376,8 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="diG-fT-bkS">
-                                <rect key="frame" x="54" y="174" width="98" height="102"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" image="Old-Camera-icon"/>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1qS-Up-tpm">
-                                <rect key="frame" x="133" y="598" width="108" height="49"/>
+                                <rect key="frame" x="133" y="610" width="108" height="49"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                 <state key="normal" title="Submit"/>
@@ -390,14 +385,10 @@
                                     <action selector="submitStory:" destination="9z3-Gk-D6q" eventType="touchUpInside" id="c3Y-yv-DhE"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0ic-ql-wAj">
-                                <rect key="frame" x="208" y="166" width="129" height="118"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="star" translatesAutoresizingMaskIntoConstraints="NO" id="gdi-gk-8bG">
+                                <rect key="frame" x="35" y="147" width="308" height="158"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" image="album"/>
-                                <connections>
-                                    <action selector="selectPhoto:" destination="9z3-Gk-D6q" eventType="touchUpInside" id="oNr-VY-Y65"/>
-                                </connections>
-                            </button>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.96078431369999995" green="0.36862745099999999" blue="0.3803921569" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -412,9 +403,8 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="galleryButton" destination="0ic-ql-wAj" id="KcW-7M-nvx"/>
+                        <outlet property="demoImg" destination="gdi-gk-8bG" id="pQj-7F-R2w"/>
                         <outlet property="hashTitle" destination="VQe-dh-o5P" id="ROG-Z3-efM"/>
-                        <outlet property="photoButton" destination="diG-fT-bkS" id="EDw-ma-vmz"/>
                         <outlet property="story" destination="A8A-WO-PRq" id="d0f-lS-kaI"/>
                         <outlet property="submitButton" destination="1qS-Up-tpm" id="iwW-HV-DB2"/>
                         <outlet property="title" destination="VQe-dh-o5P" id="F3f-Sd-RhL"/>
@@ -667,9 +657,8 @@ See the latest version of Recap at my GitHub: amigomushroom and feel free to ema
     </scenes>
     <resources>
         <image name="Icon-60.png" width="16" height="16"/>
-        <image name="Old-Camera-icon" width="512" height="512"/>
-        <image name="album" width="512" height="512"/>
         <image name="camera-switch" width="512" height="512"/>
+        <image name="star" width="200" height="153"/>
     </resources>
     <color key="tintColor" red="1" green="0.43903888499999999" blue="0.53620619189999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
 </document>
