@@ -242,6 +242,129 @@
             </objects>
             <point key="canvasLocation" x="1990" y="-273"/>
         </scene>
+        <!--DemoVC-->
+        <scene sceneID="a2d-u8-Gvf">
+            <objects>
+                <viewController storyboardIdentifier="DemoVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="5fa-af-CC8" customClass="DemoVC" customModule="MiNews" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="MZl-dx-lLb"/>
+                        <viewControllerLayoutGuide type="bottom" id="FXo-p4-Tuu"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Jz2-VH-uuZ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Nb9-ne-MQQ">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="20"/>
+                                <color key="backgroundColor" red="0.96078431369999995" green="0.36862745099999999" blue="0.3803921569" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Recap " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U4Q-bv-E6d">
+                                <rect key="frame" x="0.0" y="20" width="375" height="38"/>
+                                <color key="backgroundColor" red="0.96078431369999995" green="0.36862745099999999" blue="0.3803921569" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="38" id="ytj-Gg-SYa"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bpP-qX-nvB">
+                                <rect key="frame" x="16" y="24" width="46" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="46" id="2CZ-uY-1SS"/>
+                                </constraints>
+                                <state key="normal" title="&lt;Back">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="ehs-TB-jqc" kind="show" id="xge-Ch-ZQz"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ygd-MX-B5R">
+                                <rect key="frame" x="16" y="60" width="307" height="104"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <string key="text">San Francisco
+Science March</string>
+                                <fontDescription key="fontDescription" name="TimesNewRomanPS-BoldMT" family="Times New Roman" pointSize="43"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="April 22, 2017" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pHo-xJ-lYl">
+                                <rect key="frame" x="242" y="174" width="117" height="26"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="SinhalaSangamMN" family="Sinhala Sangam MN" pointSize="18"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Ami Zou" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XEF-Wt-wnW">
+                                <rect key="frame" x="290" y="207" width="69" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Optima-Italic" family="Optima" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Yjf-3o-vEn">
+                                <rect key="frame" x="16" y="242" width="343" height="187"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BQ7-PE-37n">
+                                <rect key="frame" x="11" y="472" width="360" height="113"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <string key="text">The March For Science on April 22 in San Francisco, CA was a time for scientists, science enthusiasts, and concerned citizens to come together</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="fb" translatesAutoresizingMaskIntoConstraints="NO" id="bwz-53-29e">
+                                <rect key="frame" x="16" y="607" width="56" height="52"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="t" translatesAutoresizingMaskIntoConstraints="NO" id="2di-GP-dJo">
+                                <rect key="frame" x="91" y="607" width="56" height="52"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="twitter" translatesAutoresizingMaskIntoConstraints="NO" id="0q2-Em-bot">
+                                <rect key="frame" x="229" y="607" width="56" height="52"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="in" translatesAutoresizingMaskIntoConstraints="NO" id="Ap4-ps-ue7">
+                                <rect key="frame" x="303" y="607" width="56" height="52"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="button" translatesAutoresizingMaskIntoConstraints="NO" id="1ji-z9-O4x">
+                                <rect key="frame" x="159" y="607" width="56" height="52"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Picture taken by Tom McCoy" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jvb-Jd-abP">
+                                <rect key="frame" x="58" y="437" width="258" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="U4Q-bv-E6d" firstAttribute="centerY" secondItem="bpP-qX-nvB" secondAttribute="centerY" id="4er-kM-0zo"/>
+                            <constraint firstItem="U4Q-bv-E6d" firstAttribute="leading" secondItem="Nb9-ne-MQQ" secondAttribute="leading" id="GNt-gq-lig"/>
+                            <constraint firstItem="bpP-qX-nvB" firstAttribute="leading" secondItem="Jz2-VH-uuZ" secondAttribute="leadingMargin" id="IIR-hZ-vAb"/>
+                            <constraint firstItem="U4Q-bv-E6d" firstAttribute="leading" secondItem="Jz2-VH-uuZ" secondAttribute="leading" id="NNU-ML-dmF"/>
+                            <constraint firstItem="U4Q-bv-E6d" firstAttribute="top" secondItem="MZl-dx-lLb" secondAttribute="bottom" id="S2r-HF-YFW"/>
+                            <constraint firstItem="U4Q-bv-E6d" firstAttribute="trailing" secondItem="Nb9-ne-MQQ" secondAttribute="trailing" id="iym-wS-LrE"/>
+                            <constraint firstAttribute="trailing" secondItem="U4Q-bv-E6d" secondAttribute="trailing" id="m5w-Uj-Sae"/>
+                            <constraint firstItem="Nb9-ne-MQQ" firstAttribute="top" secondItem="Jz2-VH-uuZ" secondAttribute="top" id="xG0-f8-Rj7"/>
+                            <constraint firstItem="Nb9-ne-MQQ" firstAttribute="bottom" secondItem="MZl-dx-lLb" secondAttribute="bottom" id="xrL-xj-5i8"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="demoImg" destination="Yjf-3o-vEn" id="DU8-ms-IIH"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PnT-xr-2Nv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2685.5999999999999" y="-268.51574212893553"/>
+        </scene>
         <!--SecondCameraVC-->
         <scene sceneID="MJL-VU-tug">
             <objects>
@@ -657,8 +780,16 @@ See the latest version of Recap at my GitHub: amigomushroom and feel free to ema
     </scenes>
     <resources>
         <image name="Icon-60.png" width="16" height="16"/>
+        <image name="button" width="512" height="512"/>
         <image name="camera-switch" width="512" height="512"/>
+        <image name="fb" width="530" height="300"/>
+        <image name="in" width="1024" height="1024"/>
         <image name="star" width="200" height="153"/>
+        <image name="t" width="338" height="338"/>
+        <image name="twitter" width="256" height="256"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="xge-Ch-ZQz"/>
+    </inferredMetricsTieBreakers>
     <color key="tintColor" red="1" green="0.43903888499999999" blue="0.53620619189999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
 </document>

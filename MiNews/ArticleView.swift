@@ -31,7 +31,7 @@ class ArticleView: UIViewController, UITableViewDelegate, UITableViewDataSource,
     @IBOutlet weak var locationText: UITextField!
     
     var articles: [Article]? = []
-    var locations: [String] = ["...current location", "San Francisco, CA", "Chapel Hill, NC", "Washington D.C., MD ", "New York City, NY"]
+    var locations: [String] = ["...current location", "Raleigh, NC", "San Francisco, CA", "Washington D.C., MD ", "New York City, NY"]
     
     override func viewDidLoad() {
         super.viewDidLoad()

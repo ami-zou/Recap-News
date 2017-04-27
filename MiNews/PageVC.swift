@@ -15,7 +15,8 @@ class PageVC: UIPageViewController, UIPageViewControllerDataSource, UIPageViewCo
                 //self.VCInstance(name: "statement"),
                 self.VCInstance(name: "ArticleVC"),
                 self.VCInstance(name: "SimpleCameraVC"),
-                self.VCInstance(name: "ReportVC")]
+                self.VCInstance(name: "ReportVC"),
+                self.VCInstance(name: "DemoVC")]
     }()
     
     private func VCInstance(name: String) -> UIViewController{
