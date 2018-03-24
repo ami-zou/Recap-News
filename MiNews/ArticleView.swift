@@ -7,6 +7,7 @@
 //  
 //  Use newsAPI for news resources
 //  API key: 3e56f15fb422469082480f36fa7609c4
+
 /* Json sample:
  {
  "status": "ok",
@@ -47,6 +48,8 @@ class ArticleView: UIViewController, UITableViewDelegate, UITableViewDataSource,
         fetchArticles(website: "HP")
     }
     
+    //MARK: PICKER
+    
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
     }
@@ -65,6 +68,7 @@ class ArticleView: UIViewController, UITableViewDelegate, UITableViewDataSource,
         fetchArticles(website: "NYT")
     }
     
+    //MARK: FETCH ARTICLE
     func fetchArticles(website:String){
         var urlRequest = URLRequest(url: URL(string:"https://newsapi.org/v1/articles?source=the-huffington-post&sortBy=top&apiKey=3e56f15fb422469082480f36fa7609c4")! ) //put a string URL inside -- now: Huffington Post
         
